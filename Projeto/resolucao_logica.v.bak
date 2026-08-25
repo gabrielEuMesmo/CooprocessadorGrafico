@@ -1,0 +1,47 @@
+module resolucao_logica(   input wire clock,     // 25 MHz
+    input wire reset,     // Active high
+    input [7:0] color_in, // Pixel color data (RRRGGGBB)
+    output [8:0] next_x_log,  // x-coordinate of NEXT pixel that will be drawn
+    output [7:0] next_y_log,  // y-coordinate of NEXT pixel that will be drawn
+    output wire hsync,    // HSYNC (to VGA connector)
+    output wire vsync,    // VSYNC (to VGA connctor)
+    output [7:0] red,     // RED (to resistor DAC VGA connector)
+    output [7:0] green,   // GREEN (to resistor DAC to VGA connector)
+    output [7:0] blue,    // BLUE (to resistor DAC to VGA connector)
+    output sync,          // SYNC to VGA connector
+    output clk,           // CLK to VGA connector
+    output blank          // BLANK to VGA connector
+);
+
+
+wire clock_25;
+wire [9:0] next_x, next_y;
+
+assign next_x_log = next_x/2;
+assign next_y_log = next_y/2;
+
+ always @(posedge clock or posedge reset) begin
+        if (reset) begin
+            clock_25 <= 1'b0;
+        end else begin
+            clock_25 <= ~clock_25; // Inverte o estado atual
+        end
+    end
+
+	 
+ vga_driver (
+    clock_25,     // 25 MHz
+    reset,     // Active high
+    color_in, // Pixel color data (RRRGGGBB)
+    next_x,  // x-coordinate of NEXT pixel that will be drawn
+    next_y,  // y-coordinate of NEXT pixel that will be drawn
+    hsync,    // HSYNC (to VGA connector)
+    vsync,    // VSYNC (to VGA connctor)
+    red,     // RED (to resistor DAC VGA connector)
+    green,   // GREEN (to resistor DAC to VGA connector)
+    blue,    // BLUE (to resistor DAC to VGA connector)
+    sync,          // SYNC to VGA connector
+    clk,           // CLK to VGA connector
+    blank          // BLANK to VGA connector
+);
+endmodule
