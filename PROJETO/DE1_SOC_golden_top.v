@@ -249,57 +249,14 @@ module DE1_SOC_golden_top(
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
-/*poligono_gerador(
-	 .trapezio(KEY[0]),
-    .x(next_x),
-    .y(next_y),
 
-    .x0(9'd290),
-    .y0(8'd200),
-
-    .x1(9'd153),
-    .y1(8'd176),
-
-    .x2(9'd032),
-    .y2(8'd003),
-	 
-	 .x3(9'd320),
-    .y3(8'd003),
-
-    .color(8'b00011100),
-
-    .pixel(color)
-);*/
-
-
-motorBack_Ground(
-	.reset(SW[9]),
-	.enable(SW[0]),
-	.clk(CLOCK_50),
-	.Roll(),
-	.WRoll(),
-	.x_tile(SW[3:1]),
-	.y_tile(SW[6:4]),
-	.write(SW[8]),
-	.color(8'b10101100), 
-	.colorOut(color),
-	.address(address),
-	.done()
-);
 
 wire [8:0] next_x;
 wire [7:0] next_y, color;
 wire outclk_0;
 wire [16:0] address;
 
-/*contadorVid(
-	.reset(1'b1),
-	.clk(CLOCK_50),
-	.enable(),
-	.x(next_x),
-	.y(next_y),
-	.address(address));
-*/
+
  CLOCK_100MGH (
 		CLOCK_50,   //  refclk.clk
 		,      //   reset.reset
@@ -307,22 +264,25 @@ wire [16:0] address;
 		locked    //  locked.export
 	);
 
-resolucao_logica(
+
+top_sistema (
+    .KEY(KEY[3:0]),
+    .SW(SW[9:0]),
+    .layer_order(), // sem origem definida nos módulos atuais — ligar em switch ou fixar
+
     .clock(outclk_0),     // 25 MHz
-    .reset(),     // Active high
-    .data(color), // Pixel color data (RRRGGGBB)
-	 .wraddress(address),
-	 .wren(1'b1),
-    .next_x_log(),  // x-coordinate of NEXT pixel that will be drawn
-    .next_y_log(),  // y-coordinate of NEXT pixel that will be drawn
+    .reset(1'b1),
     .hsync(VGA_HS),    // HSYNC (to VGA connector)
-    .vsync(VGA_VS),    // VSYNC (to VGA connctor)
+    .vsync_out(VGA_VS),    // VSYNC (to VGA connctor)
     .red(VGA_R),     // RED (to resistor DAC VGA connector)
     .green(VGA_G),   // GREEN (to resistor DAC to VGA connector)
     .blue(VGA_B),    // BLUE (to resistor DAC to VGA connector)
     .sync(VGA_SYNC_N),          // SYNC to VGA connector
-    .clk(VGA_CLK),           // CLK to VGA connector
-    .blank(VGA_BLANK_N)          // BLANK to VGA connector
+    .vga_clk(VGA_CLK),           // CLK to VGA connector
+    .blank(VGA_BLANK_N),  
+
+    .LED_Modo(LEDR[1:0]),
+    .LED_SubEstado(LEDR[3:2])
 );
 
 //=======================================================

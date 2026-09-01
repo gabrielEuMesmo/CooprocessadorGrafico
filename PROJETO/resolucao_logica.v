@@ -34,8 +34,8 @@ assign next_y_log = next_y/2;
 
 //Divisor de clock
 
-always @(posedge clock or posedge reset) begin
-        if (reset) begin
+always @(posedge clock or negedge reset) begin
+        if (!reset) begin
             count   <= 2'b00;
             clock_25 <= 1'b0;
 				
@@ -51,13 +51,20 @@ always @(*) begin
 	
 end
 
-always @(posedge vsync) begin
+always @(negedge vsync or negedge reset) begin
+
+	if(!reset)begin
+	
+		VGA <= 1'b0;
+	
+	end else begin
 	
 		if(VGA)begin
 			VGA <= 1'b0;
 		end else begin
 			VGA <= 1'b1;
 		end
+	end
 end
 RAMVIDEO(
 	clock,

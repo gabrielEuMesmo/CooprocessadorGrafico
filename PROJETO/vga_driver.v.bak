@@ -59,7 +59,7 @@ module vga_driver (
     // State machine
     always@(posedge clock) begin
         // At reset . . .
-        if (!reset) begin
+        if (reset) begin
             // Zero the counters
             h_counter   <= 10'd_0 ;
             v_counter   <= 10'd_0 ;

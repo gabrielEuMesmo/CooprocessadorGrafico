@@ -21,13 +21,14 @@ module contadorVid(
 			count = 0;
 			contando = 1;
 			
-		end else if(clk /*contando*/ && ~enable)begin
+		end else if(clk && contando)begin
 		
 			count = count +1;
 			
 		end else if(count == 76800)begin
 		
 			count = 0;
+			contando = 0;
 			done = 1;
 			
 		end
