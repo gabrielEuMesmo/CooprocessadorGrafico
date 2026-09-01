@@ -282,7 +282,8 @@ top_sistema (
     .blank(VGA_BLANK_N),  
 
     .LED_Modo(LEDR[1:0]),
-    .LED_SubEstado(LEDR[3:2])
+    .LED_SubEstado(LEDR[3:2]),
+	 .LEDIDLE(LEDR[4])
 );
 
 //=======================================================

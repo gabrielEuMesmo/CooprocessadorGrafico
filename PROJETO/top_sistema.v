@@ -15,7 +15,9 @@ module top_sistema (
     output wire        blank,
 
     output wire [1:0]  LED_Modo,
-    output wire [1:0]  LED_SubEstado
+    output wire [1:0]  LED_SubEstado,
+	 
+	 output LEDIDLE		
 );
 
     // ---- Fios de interconexão: Controlador -> Motor de vídeo ----
@@ -104,7 +106,8 @@ module top_sistema (
         .address        (w_address),
         .pixel          (w_pixel),
         .camada_ativa   (w_camada_ativa),
-        .wren           (w_wren)
+        .wren           (w_wren),
+		  .LEDIDLE			(LEDIDLE)
     );
 
     // ================= Resolução / saída VGA =================

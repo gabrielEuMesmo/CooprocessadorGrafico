@@ -8,10 +8,10 @@ module MEF_geral_layer(
 	output reg enableBg,
 	output reg enableSprt,
 	output reg enablePol,
-	input vsync);
+	input vsync,
+	output reg LEDIDLE);
 	
 	wire vsyncPulse;
-	
 	
 	parameter BG = 2'b00, SPRT = 2'b01, POL = 2'b10, IDLE = 2'b11;
 	reg [1:0] estado_atual, prox_estado;
@@ -96,6 +96,11 @@ module MEF_geral_layer(
 				end
 				
 			end
+				if(estado_atual == BG)begin
+					LEDIDLE = 1'b1;
+				end else begin
+					LEDIDLE = 1'b0;
+				end
 				if(estado_atual == BG)begin
 					enableBg = 1'b1;
 				end else begin

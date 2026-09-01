@@ -1,12 +1,12 @@
-Fitter Status : Successful - Tue Sep  1 11:00:05 2026
+Fitter Status : Successful - Tue Sep  1 13:19:23 2026
 Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 Revision Name : CoprocessadorGrafico
 Top-level Entity Name : DE1_SOC_golden_top
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 7,334 / 32,070 ( 23 % )
-Total registers : 10348
+Logic utilization (in ALMs) : 7,097 / 32,070 ( 22 % )
+Total registers : 10344
 Total pins : 241 / 457 ( 53 % )
 Total virtual pins : 0
 Total block memory bits : 747,072 / 4,065,280 ( 18 % )

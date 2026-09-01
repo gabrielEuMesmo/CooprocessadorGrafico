@@ -31,7 +31,8 @@ module motorVideoTop (
     output reg  [16:0] address,
     output reg  [7:0]  pixel,
     output wire        camada_ativa, // alto sempre que Bg/Sprt/Pol estiver desenhando
-	 output reg wren
+	 output reg wren,
+	 output LEDIDLE
 );
 
     wire enableBg, enableSprt, enablePol;
@@ -47,7 +48,8 @@ module motorVideoTop (
         .enableBg   (enableBg),
         .enableSprt (enableSprt),
         .enablePol  (enablePol),
-        .vsync      (vsync)
+        .vsync      (vsync), 
+		  .LEDIDLE(LEDIDLE)
     );
 
     // ================= Background =================

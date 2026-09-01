@@ -179,7 +179,7 @@ LEDR[0] <= top_sistema:comb_4.LED_Modo
 LEDR[1] <= top_sistema:comb_4.LED_Modo
 LEDR[2] <= top_sistema:comb_4.LED_SubEstado
 LEDR[3] <= top_sistema:comb_4.LED_SubEstado
-LEDR[4] <= <GND>
+LEDR[4] <= top_sistema:comb_4.LEDIDLE
 LEDR[5] <= <GND>
 LEDR[6] <= <GND>
 LEDR[7] <= <GND>
@@ -479,6 +479,7 @@ LED_Modo[0] <= controlador_MEF:u_controlador.LED_Modo
 LED_Modo[1] <= controlador_MEF:u_controlador.LED_Modo
 LED_SubEstado[0] <= controlador_MEF:u_controlador.LED_SubEstado
 LED_SubEstado[1] <= controlador_MEF:u_controlador.LED_SubEstado
+LEDIDLE <= motorVideoTop:u_video.LEDIDLE
 
 
 |DE1_SOC_golden_top|top_sistema:comb_4|controlador_MEF:u_controlador
@@ -998,6 +999,7 @@ pixel[6] <= pixel[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
 pixel[7] <= pixel[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
 camada_ativa <= camada_ativa.DB_MAX_OUTPUT_PORT_TYPE
 wren <= wren.DB_MAX_OUTPUT_PORT_TYPE
+LEDIDLE <= MEF_geral_layer:u_mef.LEDIDLE
 
 
 |DE1_SOC_golden_top|top_sistema:comb_4|motorVideoTop:u_video|MEF_geral_layer:u_mef
@@ -1022,9 +1024,10 @@ enableBg <= enableBg.DB_MAX_OUTPUT_PORT_TYPE
 enableSprt <= enableSprt.DB_MAX_OUTPUT_PORT_TYPE
 enablePol <= enablePol.DB_MAX_OUTPUT_PORT_TYPE
 vsync => vsync.IN1
+LEDIDLE <= enableBg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DE1_SOC_golden_top|top_sistema:comb_4|motorVideoTop:u_video|MEF_geral_layer:u_mef|rising_edge_detector:comb_62
+|DE1_SOC_golden_top|top_sistema:comb_4|motorVideoTop:u_video|MEF_geral_layer:u_mef|rising_edge_detector:comb_63
 clk => level_d.CLK
 rst_n => level_d.ACLR
 level_i => pulse_o.IN1
