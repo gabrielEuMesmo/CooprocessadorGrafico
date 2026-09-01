@@ -1,5 +1,5 @@
 Timing Analyzer report for CoprocessadorGrafico
-Mon Aug 31 17:12:44 2026
+Mon Aug 31 21:14:56 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -97,27 +97,19 @@ on the Quartus Prime software download page.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 20          ;
-; Maximum allowed            ; 14          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 2.37        ;
-; Maximum used               ; 14          ;
+; Average used               ; 2.55        ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  17.6%      ;
-;     Processor 3            ;  10.9%      ;
-;     Processor 4            ;  10.1%      ;
-;     Processor 5            ;   9.9%      ;
-;     Processor 6            ;   9.9%      ;
-;     Processor 7            ;   9.9%      ;
-;     Processor 8            ;   9.9%      ;
-;     Processor 9            ;   9.9%      ;
-;     Processor 10           ;   9.9%      ;
-;     Processor 11           ;   9.9%      ;
-;     Processor 12           ;   9.8%      ;
-;     Processor 13           ;   9.8%      ;
-;     Processor 14           ;   9.8%      ;
+;     Processor 2            ;  38.3%      ;
+;     Processor 3            ;  30.2%      ;
+;     Processor 4            ;  29.0%      ;
+;     Processor 5            ;  28.7%      ;
+;     Processor 6            ;  28.7%      ;
 +----------------------------+-------------+
 
 
@@ -130,6 +122,7 @@ on the Quartus Prime software download page.
 ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; Generated ; 3.333  ; 300.0 MHz  ; 0.000 ; 1.666  ; 50.00      ; 2         ; 12          ;       ;        ;           ;            ; false    ; CLOCK_50                                                                      ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|refclkin      ; { comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] }   ;
 ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; Generated ; 10.000 ; 100.0 MHz  ; 0.000 ; 5.000  ; 50.00      ; 3         ; 1           ;       ;        ;           ;            ; false    ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|vco0ph[0] ; { comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk } ;
 ; resolucao_logica:comb_5|clock_25                                                ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                               ;                                                                                    ; { resolucao_logica:comb_5|clock_25 }                                                ;
+; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                               ;                                                                                    ; { resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg }                            ;
 +---------------------------------------------------------------------------------+-----------+--------+------------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+-------------------------------------------------------------------------------+------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
 
 
@@ -138,9 +131,10 @@ on the Quartus Prime software download page.
 +------------+-----------------+---------------------------------------------------------------------------------+------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                      ; Note                                           ;
 +------------+-----------------+---------------------------------------------------------------------------------+------------------------------------------------+
-; 252.84 MHz ; 252.84 MHz      ; CLOCK_50                                                                        ;                                                ;
-; 268.1 MHz  ; 268.1 MHz       ; resolucao_logica:comb_5|clock_25                                                ;                                                ;
-; 392.16 MHz ; 315.06 MHz      ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; limit due to minimum period restriction (tmin) ;
+; 231.37 MHz ; 231.37 MHz      ; resolucao_logica:comb_5|clock_25                                                ;                                                ;
+; 271.74 MHz ; 271.74 MHz      ; CLOCK_50                                                                        ;                                                ;
+; 376.08 MHz ; 376.08 MHz      ; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ;                                                ;
+; 486.85 MHz ; 315.06 MHz      ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; limit due to minimum period restriction (tmin) ;
 +------------+-----------------+---------------------------------------------------------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -156,9 +150,10 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                           ; Slack   ; End Point TNS ;
 +---------------------------------------------------------------------------------+---------+---------------+
-; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -10.156 ; -13976.985    ;
-; resolucao_logica:comb_5|clock_25                                                ; -8.260  ; -162.870      ;
-; CLOCK_50                                                                        ; 16.045  ; 0.000         ;
+; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -10.270 ; -29706.192    ;
+; resolucao_logica:comb_5|clock_25                                                ; -9.374  ; -209.966      ;
+; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; -1.659  ; -3.313        ;
+; CLOCK_50                                                                        ; 16.320  ; 0.000         ;
 +---------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -167,9 +162,10 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                           ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------------+-------+---------------+
-; resolucao_logica:comb_5|clock_25                                                ; 0.330 ; 0.000         ;
-; CLOCK_50                                                                        ; 0.375 ; 0.000         ;
+; resolucao_logica:comb_5|clock_25                                                ; 0.321 ; 0.000         ;
+; CLOCK_50                                                                        ; 0.376 ; 0.000         ;
 ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.410 ; 0.000         ;
+; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; 1.471 ; 0.000         ;
 +---------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -190,10 +186,11 @@ No paths to report.
 +---------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                           ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------+--------+---------------+
-; resolucao_logica:comb_5|clock_25                                                ; -0.394 ; -27.951       ;
+; resolucao_logica:comb_5|clock_25                                                ; -0.394 ; -29.643       ;
+; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; -0.394 ; -1.087        ;
 ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
-; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 3.759  ; 0.000         ;
-; CLOCK_50                                                                        ; 9.238  ; 0.000         ;
+; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 3.758  ; 0.000         ;
+; CLOCK_50                                                                        ; 9.242  ; 0.000         ;
 +---------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -209,9 +206,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------+-----------------+---------------------------------------------------------------------------------+------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                      ; Note                                           ;
 +------------+-----------------+---------------------------------------------------------------------------------+------------------------------------------------+
-; 250.88 MHz ; 250.88 MHz      ; CLOCK_50                                                                        ;                                                ;
-; 268.82 MHz ; 268.82 MHz      ; resolucao_logica:comb_5|clock_25                                                ;                                                ;
-; 397.77 MHz ; 315.06 MHz      ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; limit due to minimum period restriction (tmin) ;
+; 234.03 MHz ; 234.03 MHz      ; resolucao_logica:comb_5|clock_25                                                ;                                                ;
+; 266.03 MHz ; 266.03 MHz      ; CLOCK_50                                                                        ;                                                ;
+; 387.75 MHz ; 387.75 MHz      ; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ;                                                ;
+; 479.85 MHz ; 315.06 MHz      ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; limit due to minimum period restriction (tmin) ;
 +------------+-----------------+---------------------------------------------------------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -221,9 +219,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                           ; Slack   ; End Point TNS ;
 +---------------------------------------------------------------------------------+---------+---------------+
-; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -10.083 ; -13430.662    ;
-; resolucao_logica:comb_5|clock_25                                                ; -8.319  ; -164.262      ;
-; CLOCK_50                                                                        ; 16.014  ; 0.000         ;
+; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -10.154 ; -28442.937    ;
+; resolucao_logica:comb_5|clock_25                                                ; -9.445  ; -210.322      ;
+; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; -1.579  ; -3.154        ;
+; CLOCK_50                                                                        ; 16.241  ; 0.000         ;
 +---------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -232,9 +231,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                           ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------+--------+---------------+
-; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -0.034 ; -0.034        ;
-; resolucao_logica:comb_5|clock_25                                                ; 0.313  ; 0.000         ;
-; CLOCK_50                                                                        ; 0.380  ; 0.000         ;
+; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -0.046 ; -0.046        ;
+; resolucao_logica:comb_5|clock_25                                                ; 0.303  ; 0.000         ;
+; CLOCK_50                                                                        ; 0.385  ; 0.000         ;
+; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; 1.412  ; 0.000         ;
 +---------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -255,10 +255,11 @@ No paths to report.
 +---------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                           ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------+--------+---------------+
-; resolucao_logica:comb_5|clock_25                                                ; -0.394 ; -27.483       ;
+; resolucao_logica:comb_5|clock_25                                                ; -0.394 ; -28.854       ;
+; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; -0.394 ; -1.070        ;
 ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
-; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 3.738  ; 0.000         ;
-; CLOCK_50                                                                        ; 9.292  ; 0.000         ;
+; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 3.735  ; 0.000         ;
+; CLOCK_50                                                                        ; 9.298  ; 0.000         ;
 +---------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -274,9 +275,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                           ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------+--------+---------------+
-; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -7.207 ; -6744.638     ;
-; resolucao_logica:comb_5|clock_25                                                ; -4.504 ; -76.062       ;
-; CLOCK_50                                                                        ; 17.653 ; 0.000         ;
+; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -7.386 ; -14793.348    ;
+; resolucao_logica:comb_5|clock_25                                                ; -5.248 ; -101.005      ;
+; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; -0.767 ; -1.533        ;
+; CLOCK_50                                                                        ; 17.814 ; 0.000         ;
 +---------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -285,9 +287,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                           ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------------+-------+---------------+
-; resolucao_logica:comb_5|clock_25                                                ; 0.135 ; 0.000         ;
+; resolucao_logica:comb_5|clock_25                                                ; 0.120 ; 0.000         ;
 ; CLOCK_50                                                                        ; 0.182 ; 0.000         ;
-; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.210 ; 0.000         ;
+; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.214 ; 0.000         ;
+; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; 0.846 ; 0.000         ;
 +---------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -308,7 +311,8 @@ No paths to report.
 +---------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                           ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------------+-------+---------------+
-; resolucao_logica:comb_5|clock_25                                                ; 0.010 ; 0.000         ;
+; resolucao_logica:comb_5|clock_25                                                ; 0.045 ; 0.000         ;
+; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; 0.084 ; 0.000         ;
 ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 1.666 ; 0.000         ;
 ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 3.879 ; 0.000         ;
 ; CLOCK_50                                                                        ; 9.108 ; 0.000         ;
@@ -327,9 +331,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                           ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------+--------+---------------+
-; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -5.835 ; -5022.037     ;
-; resolucao_logica:comb_5|clock_25                                                ; -4.297 ; -68.756       ;
-; CLOCK_50                                                                        ; 17.837 ; 0.000         ;
+; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -5.944 ; -11024.136    ;
+; resolucao_logica:comb_5|clock_25                                                ; -4.890 ; -92.378       ;
+; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; -0.642 ; -1.284        ;
+; CLOCK_50                                                                        ; 17.952 ; 0.000         ;
 +---------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -338,9 +343,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                           ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------------+-------+---------------+
-; resolucao_logica:comb_5|clock_25                                                ; 0.108 ; 0.000         ;
+; resolucao_logica:comb_5|clock_25                                                ; 0.098 ; 0.000         ;
 ; CLOCK_50                                                                        ; 0.172 ; 0.000         ;
-; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.201 ; 0.000         ;
+; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.205 ; 0.000         ;
+; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; 0.758 ; 0.000         ;
 +---------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -361,7 +367,8 @@ No paths to report.
 +---------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                           ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------------+-------+---------------+
-; resolucao_logica:comb_5|clock_25                                                ; 0.048 ; 0.000         ;
+; resolucao_logica:comb_5|clock_25                                                ; 0.076 ; 0.000         ;
+; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; 0.097 ; 0.000         ;
 ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 1.666 ; 0.000         ;
 ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 3.882 ; 0.000         ;
 ; CLOCK_50                                                                        ; 9.068 ; 0.000         ;
@@ -380,16 +387,18 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +----------------------------------------------------------------------------------+------------+--------+----------+---------+---------------------+
 ; Clock                                                                            ; Setup      ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +----------------------------------------------------------------------------------+------------+--------+----------+---------+---------------------+
-; Worst-case Slack                                                                 ; -10.156    ; -0.034 ; N/A      ; N/A     ; -0.394              ;
-;  CLOCK_50                                                                        ; 16.014     ; 0.172  ; N/A      ; N/A     ; 9.068               ;
+; Worst-case Slack                                                                 ; -10.270    ; -0.046 ; N/A      ; N/A     ; -0.394              ;
+;  CLOCK_50                                                                        ; 16.241     ; 0.172  ; N/A      ; N/A     ; 9.068               ;
 ;  comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; N/A        ; N/A    ; N/A      ; N/A     ; 1.666               ;
-;  comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -10.156    ; -0.034 ; N/A      ; N/A     ; 3.738               ;
-;  resolucao_logica:comb_5|clock_25                                                ; -8.319     ; 0.108  ; N/A      ; N/A     ; -0.394              ;
-; Design-wide TNS                                                                  ; -14139.855 ; -0.034 ; 0.0      ; 0.0     ; -27.951             ;
+;  comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -10.270    ; -0.046 ; N/A      ; N/A     ; 3.735               ;
+;  resolucao_logica:comb_5|clock_25                                                ; -9.445     ; 0.098  ; N/A      ; N/A     ; -0.394              ;
+;  resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; -1.659     ; 0.758  ; N/A      ; N/A     ; -0.394              ;
+; Design-wide TNS                                                                  ; -29919.471 ; -0.046 ; 0.0      ; 0.0     ; -30.73              ;
 ;  CLOCK_50                                                                        ; 0.000      ; 0.000  ; N/A      ; N/A     ; 0.000               ;
 ;  comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; N/A        ; N/A    ; N/A      ; N/A     ; 0.000               ;
-;  comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -13976.985 ; -0.034 ; N/A      ; N/A     ; 0.000               ;
-;  resolucao_logica:comb_5|clock_25                                                ; -164.262   ; 0.000  ; N/A      ; N/A     ; -27.951             ;
+;  comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -29706.192 ; -0.046 ; N/A      ; N/A     ; 0.000               ;
+;  resolucao_logica:comb_5|clock_25                                                ; -210.322   ; 0.000  ; N/A      ; N/A     ; -29.643             ;
+;  resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; -3.313     ; 0.000  ; N/A      ; N/A     ; -1.087              ;
 +----------------------------------------------------------------------------------+------------+--------+----------+---------+---------------------+
 
 
@@ -1619,12 +1628,15 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------------------------+---------------------------------------------------------------------------------+--------------+----------+----------+----------+
 ; From Clock                                                                      ; To Clock                                                                        ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------------------------------------------------------+---------------------------------------------------------------------------------+--------------+----------+----------+----------+
-; CLOCK_50                                                                        ; CLOCK_50                                                                        ; 262          ; 0        ; 0        ; 0        ;
+; CLOCK_50                                                                        ; CLOCK_50                                                                        ; 252          ; 0        ; 0        ; 0        ;
 ; CLOCK_50                                                                        ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; > 2147483647 ; 0        ; 0        ; 0        ;
-; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 88           ; 0        ; 0        ; 0        ;
-; resolucao_logica:comb_5|clock_25                                                ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 41308        ; 0        ; 0        ; 0        ;
-; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; resolucao_logica:comb_5|clock_25                                                ; 144          ; 0        ; 0        ; 0        ;
-; resolucao_logica:comb_5|clock_25                                                ; resolucao_logica:comb_5|clock_25                                                ; 1366         ; 0        ; 0        ; 0        ;
+; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 168          ; 0        ; 0        ; 0        ;
+; resolucao_logica:comb_5|clock_25                                                ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 82268        ; 0        ; 0        ; 0        ;
+; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 304          ; 0        ; 0        ; 0        ;
+; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; resolucao_logica:comb_5|clock_25                                                ; 304          ; 0        ; 0        ; 0        ;
+; resolucao_logica:comb_5|clock_25                                                ; resolucao_logica:comb_5|clock_25                                                ; 1649         ; 0        ; 0        ; 0        ;
+; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; resolucao_logica:comb_5|clock_25                                                ; 17           ; 1        ; 0        ; 0        ;
+; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; 2            ; 0        ; 0        ; 0        ;
 +---------------------------------------------------------------------------------+---------------------------------------------------------------------------------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1634,12 +1646,15 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------------------------------------------------------------------+---------------------------------------------------------------------------------+--------------+----------+----------+----------+
 ; From Clock                                                                      ; To Clock                                                                        ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------------------------------------------------------+---------------------------------------------------------------------------------+--------------+----------+----------+----------+
-; CLOCK_50                                                                        ; CLOCK_50                                                                        ; 262          ; 0        ; 0        ; 0        ;
+; CLOCK_50                                                                        ; CLOCK_50                                                                        ; 252          ; 0        ; 0        ; 0        ;
 ; CLOCK_50                                                                        ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; > 2147483647 ; 0        ; 0        ; 0        ;
-; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 88           ; 0        ; 0        ; 0        ;
-; resolucao_logica:comb_5|clock_25                                                ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 41308        ; 0        ; 0        ; 0        ;
-; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; resolucao_logica:comb_5|clock_25                                                ; 144          ; 0        ; 0        ; 0        ;
-; resolucao_logica:comb_5|clock_25                                                ; resolucao_logica:comb_5|clock_25                                                ; 1366         ; 0        ; 0        ; 0        ;
+; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 168          ; 0        ; 0        ; 0        ;
+; resolucao_logica:comb_5|clock_25                                                ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 82268        ; 0        ; 0        ; 0        ;
+; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 304          ; 0        ; 0        ; 0        ;
+; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; resolucao_logica:comb_5|clock_25                                                ; 304          ; 0        ; 0        ; 0        ;
+; resolucao_logica:comb_5|clock_25                                                ; resolucao_logica:comb_5|clock_25                                                ; 1649         ; 0        ; 0        ; 0        ;
+; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; resolucao_logica:comb_5|clock_25                                                ; 17           ; 1        ; 0        ; 0        ;
+; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; 2            ; 0        ; 0        ; 0        ;
 +---------------------------------------------------------------------------------+---------------------------------------------------------------------------------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1664,7 +1679,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 9     ; 9    ;
-; Unconstrained Input Port Paths  ; 556   ; 556  ;
+; Unconstrained Input Port Paths  ; 552   ; 552  ;
 ; Unconstrained Output Ports      ; 12    ; 12   ;
 ; Unconstrained Output Port Paths ; 13    ; 13   ;
 +---------------------------------+-------+------+
@@ -1679,6 +1694,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; Generated ; Constrained ;
 ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; Generated ; Constrained ;
 ; resolucao_logica:comb_5|clock_25                                                ; resolucao_logica:comb_5|clock_25                                                ; Base      ; Constrained ;
+; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg                            ; Base      ; Constrained ;
 +---------------------------------------------------------------------------------+---------------------------------------------------------------------------------+-----------+-------------+
 
 
@@ -1762,11 +1778,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Mon Aug 31 17:12:39 2026
+    Info: Processing started: Mon Aug 31 21:14:46 2026
 Info: Command: quartus_sta CoprocessadorGrafico -c CoprocessadorGrafico
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'CoprocessadorGrafico.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -1778,6 +1794,7 @@ Info (332110): Deriving PLL clocks
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name resolucao_logica:comb_5|clock_25 resolucao_logica:comb_5|clock_25
+    Info (332105): create_clock -period 1.000 -name resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL  from: refclkin  to: fbclk
     Info (332098): Cell: comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
@@ -1788,27 +1805,30 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -10.156
+Info (332146): Worst-case setup slack is -10.270
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -10.156          -13976.985 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    -8.260            -162.870 resolucao_logica:comb_5|clock_25 
-    Info (332119):    16.045               0.000 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.330
+    Info (332119):   -10.270          -29706.192 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -9.374            -209.966 resolucao_logica:comb_5|clock_25 
+    Info (332119):    -1.659              -3.313 resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg 
+    Info (332119):    16.320               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.321
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.330               0.000 resolucao_logica:comb_5|clock_25 
-    Info (332119):     0.375               0.000 CLOCK_50 
+    Info (332119):     0.321               0.000 resolucao_logica:comb_5|clock_25 
+    Info (332119):     0.376               0.000 CLOCK_50 
     Info (332119):     0.410               0.000 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     1.471               0.000 resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -27.951 resolucao_logica:comb_5|clock_25 
+    Info (332119):    -0.394             -29.643 resolucao_logica:comb_5|clock_25 
+    Info (332119):    -0.394              -1.087 resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg 
     Info (332119):     1.666               0.000 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     3.759               0.000 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     9.238               0.000 CLOCK_50 
+    Info (332119):     3.758               0.000 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     9.242               0.000 CLOCK_50 
 Info (332114): Report Metastability: Found 4 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1100mV 0C Model
@@ -1821,27 +1841,30 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -10.083
+Info (332146): Worst-case setup slack is -10.154
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -10.083          -13430.662 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    -8.319            -164.262 resolucao_logica:comb_5|clock_25 
-    Info (332119):    16.014               0.000 CLOCK_50 
-Info (332146): Worst-case hold slack is -0.034
+    Info (332119):   -10.154          -28442.937 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -9.445            -210.322 resolucao_logica:comb_5|clock_25 
+    Info (332119):    -1.579              -3.154 resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg 
+    Info (332119):    16.241               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is -0.046
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.034              -0.034 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.313               0.000 resolucao_logica:comb_5|clock_25 
-    Info (332119):     0.380               0.000 CLOCK_50 
+    Info (332119):    -0.046              -0.046 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.303               0.000 resolucao_logica:comb_5|clock_25 
+    Info (332119):     0.385               0.000 CLOCK_50 
+    Info (332119):     1.412               0.000 resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -27.483 resolucao_logica:comb_5|clock_25 
+    Info (332119):    -0.394             -28.854 resolucao_logica:comb_5|clock_25 
+    Info (332119):    -0.394              -1.070 resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg 
     Info (332119):     1.666               0.000 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     3.738               0.000 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     9.292               0.000 CLOCK_50 
+    Info (332119):     3.735               0.000 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     9.298               0.000 CLOCK_50 
 Info (332114): Report Metastability: Found 4 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 85C Model
@@ -1854,24 +1877,27 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -7.207
+Info (332146): Worst-case setup slack is -7.386
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.207           -6744.638 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    -4.504             -76.062 resolucao_logica:comb_5|clock_25 
-    Info (332119):    17.653               0.000 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.135
+    Info (332119):    -7.386          -14793.348 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -5.248            -101.005 resolucao_logica:comb_5|clock_25 
+    Info (332119):    -0.767              -1.533 resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg 
+    Info (332119):    17.814               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.120
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.135               0.000 resolucao_logica:comb_5|clock_25 
+    Info (332119):     0.120               0.000 resolucao_logica:comb_5|clock_25 
     Info (332119):     0.182               0.000 CLOCK_50 
-    Info (332119):     0.210               0.000 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.214               0.000 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.846               0.000 resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is 0.010
+Info (332146): Worst-case minimum pulse width slack is 0.045
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.010               0.000 resolucao_logica:comb_5|clock_25 
+    Info (332119):     0.045               0.000 resolucao_logica:comb_5|clock_25 
+    Info (332119):     0.084               0.000 resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg 
     Info (332119):     1.666               0.000 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     3.879               0.000 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
     Info (332119):     9.108               0.000 CLOCK_50 
@@ -1885,24 +1911,27 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.835
+Info (332146): Worst-case setup slack is -5.944
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.835           -5022.037 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    -4.297             -68.756 resolucao_logica:comb_5|clock_25 
-    Info (332119):    17.837               0.000 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.108
+    Info (332119):    -5.944          -11024.136 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -4.890             -92.378 resolucao_logica:comb_5|clock_25 
+    Info (332119):    -0.642              -1.284 resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg 
+    Info (332119):    17.952               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.098
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.108               0.000 resolucao_logica:comb_5|clock_25 
+    Info (332119):     0.098               0.000 resolucao_logica:comb_5|clock_25 
     Info (332119):     0.172               0.000 CLOCK_50 
-    Info (332119):     0.201               0.000 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.205               0.000 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.758               0.000 resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is 0.048
+Info (332146): Worst-case minimum pulse width slack is 0.076
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.048               0.000 resolucao_logica:comb_5|clock_25 
+    Info (332119):     0.076               0.000 resolucao_logica:comb_5|clock_25 
+    Info (332119):     0.097               0.000 resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg 
     Info (332119):     1.666               0.000 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     3.882               0.000 comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
     Info (332119):     9.068               0.000 CLOCK_50 
@@ -1911,9 +1940,9 @@ Info (332114): Report Metastability: Found 4 synchronizer chains.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1066 megabytes
-    Info: Processing ended: Mon Aug 31 17:12:44 2026
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Peak virtual memory: 964 megabytes
+    Info: Processing ended: Mon Aug 31 21:14:56 2026
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:21
 
 

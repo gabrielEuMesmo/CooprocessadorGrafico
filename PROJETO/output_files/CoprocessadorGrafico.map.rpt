@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CoprocessadorGrafico
-Mon Aug 31 17:11:41 2026
+Mon Aug 31 21:12:14 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -15,26 +15,28 @@ Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. State Machine - |DE1_SOC_golden_top|resolucao_logica:comb_5|vga_driver:comb_40|v_state
- 11. State Machine - |DE1_SOC_golden_top|resolucao_logica:comb_5|vga_driver:comb_40|h_state
+ 10. State Machine - |DE1_SOC_golden_top|resolucao_logica:comb_5|vga_driver:comb_55|v_state
+ 11. State Machine - |DE1_SOC_golden_top|resolucao_logica:comb_5|vga_driver:comb_55|h_state
  12. Registers Removed During Synthesis
  13. General Register Statistics
  14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for resolucao_logica:comb_5|RAMVIDEO:comb_39|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated
- 16. Parameter Settings for User Entity Instance: CLOCK_100MGH:comb_4|CLOCK_100MGH_0002:clock_100mgh_inst|altera_pll:altera_pll_i
- 17. Parameter Settings for User Entity Instance: resolucao_logica:comb_5|RAMVIDEO:comb_39|altsyncram:altsyncram_component
- 18. Parameter Settings for User Entity Instance: resolucao_logica:comb_5|vga_driver:comb_40
- 19. Parameter Settings for Inferred Entity Instance: motorBack_Ground:comb_3|contadorVid:comb_49297|lpm_divide:Div0
- 20. Parameter Settings for Inferred Entity Instance: motorBack_Ground:comb_3|contadorVid:comb_49297|lpm_divide:Mod0
- 21. altsyncram Parameter Settings by Entity Instance
- 22. Port Connectivity Checks: "resolucao_logica:comb_5|vga_driver:comb_40"
- 23. Port Connectivity Checks: "resolucao_logica:comb_5"
- 24. Port Connectivity Checks: "CLOCK_100MGH:comb_4"
- 25. Port Connectivity Checks: "motorBack_Ground:comb_3|contadorVid:comb_49297"
- 26. Port Connectivity Checks: "motorBack_Ground:comb_3"
- 27. Post-Synthesis Netlist Statistics for Top Partition
- 28. Elapsed Time Per Partition
- 29. Analysis & Synthesis Messages
+ 15. Source assignments for resolucao_logica:comb_5|RAMVIDEO:comb_53|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated
+ 16. Source assignments for resolucao_logica:comb_5|RAMVIDEO:comb_54|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated
+ 17. Parameter Settings for User Entity Instance: CLOCK_100MGH:comb_4|CLOCK_100MGH_0002:clock_100mgh_inst|altera_pll:altera_pll_i
+ 18. Parameter Settings for User Entity Instance: resolucao_logica:comb_5|RAMVIDEO:comb_53|altsyncram:altsyncram_component
+ 19. Parameter Settings for User Entity Instance: resolucao_logica:comb_5|RAMVIDEO:comb_54|altsyncram:altsyncram_component
+ 20. Parameter Settings for User Entity Instance: resolucao_logica:comb_5|vga_driver:comb_55
+ 21. Parameter Settings for Inferred Entity Instance: motorBack_Ground:comb_3|contadorVid:comb_49580|lpm_divide:Mod0
+ 22. Parameter Settings for Inferred Entity Instance: motorBack_Ground:comb_3|contadorVid:comb_49580|lpm_divide:Div0
+ 23. altsyncram Parameter Settings by Entity Instance
+ 24. Port Connectivity Checks: "resolucao_logica:comb_5|vga_driver:comb_55"
+ 25. Port Connectivity Checks: "resolucao_logica:comb_5"
+ 26. Port Connectivity Checks: "CLOCK_100MGH:comb_4"
+ 27. Port Connectivity Checks: "motorBack_Ground:comb_3|contadorVid:comb_49580"
+ 28. Port Connectivity Checks: "motorBack_Ground:comb_3"
+ 29. Post-Synthesis Netlist Statistics for Top Partition
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
 
 
 
@@ -61,16 +63,16 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Aug 31 17:11:41 2026           ;
+; Analysis & Synthesis Status     ; Successful - Mon Aug 31 21:12:14 2026           ;
 ; Quartus Prime Version           ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                   ; CoprocessadorGrafico                            ;
 ; Top-level Entity Name           ; DE1_SOC_golden_top                              ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 131                                             ;
+; Total registers                 ; 132                                             ;
 ; Total pins                      ; 241                                             ;
 ; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 614,400                                         ;
+; Total block memory bits         ; 1,228,800                                       ;
 ; Total DSP Blocks                ; 0                                               ;
 ; Total HSSI RX PCSs              ; 0                                               ;
 ; Total HSSI PMA RX Deserializers ; 0                                               ;
@@ -173,11 +175,11 @@ on the Quartus Prime software download page.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 20          ;
-; Maximum allowed            ; 14          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 14          ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
@@ -186,52 +188,46 @@ on the Quartus Prime software download page.
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
-;     Processor 9            ;   0.0%      ;
-;     Processor 10           ;   0.0%      ;
-;     Processor 11           ;   0.0%      ;
-;     Processors 12-14       ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                     ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------------------------+--------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                                  ; Library      ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------------------------+--------------+
-; motorPol.v                       ; yes             ; User Verilog HDL File                  ; /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/motorPol.v                       ;              ;
-; CLOCK_100MGH.v                   ; yes             ; User Wizard-Generated File             ; /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/CLOCK_100MGH.v                   ; CLOCK_100MGH ;
-; CLOCK_100MGH/CLOCK_100MGH_0002.v ; yes             ; User Verilog HDL File                  ; /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/CLOCK_100MGH/CLOCK_100MGH_0002.v ; CLOCK_100MGH ;
-; vga_driver.v                     ; yes             ; User Verilog HDL File                  ; /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/vga_driver.v                     ;              ;
-; resolucao_logica.v               ; yes             ; User Verilog HDL File                  ; /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/resolucao_logica.v               ;              ;
-; DE1_SOC_golden_top.v             ; yes             ; User Verilog HDL File                  ; /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v             ;              ;
-; RAMVIDEO.v                       ; yes             ; User Wizard-Generated File             ; /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/RAMVIDEO.v                       ;              ;
-; contadorVid.v                    ; yes             ; User Verilog HDL File                  ; /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/contadorVid.v                    ;              ;
-; output_files/motorBack_Ground.v  ; yes             ; User Verilog HDL File                  ; /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/output_files/motorBack_Ground.v  ;              ;
-; altera_pll.v                     ; yes             ; Megafunction                           ; /opt/intelFPGA_lite/25.1/quartus/libraries/megafunctions/altera_pll.v                                         ;              ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; /opt/intelFPGA_lite/25.1/quartus/libraries/megafunctions/altsyncram.tdf                                       ;              ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; /opt/intelFPGA_lite/25.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                ;              ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; /opt/intelFPGA_lite/25.1/quartus/libraries/megafunctions/lpm_mux.inc                                          ;              ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; /opt/intelFPGA_lite/25.1/quartus/libraries/megafunctions/lpm_decode.inc                                       ;              ;
-; aglobal251.inc                   ; yes             ; Megafunction                           ; /opt/intelFPGA_lite/25.1/quartus/libraries/megafunctions/aglobal251.inc                                       ;              ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; /opt/intelFPGA_lite/25.1/quartus/libraries/megafunctions/a_rdenreg.inc                                        ;              ;
-; altrom.inc                       ; yes             ; Megafunction                           ; /opt/intelFPGA_lite/25.1/quartus/libraries/megafunctions/altrom.inc                                           ;              ;
-; altram.inc                       ; yes             ; Megafunction                           ; /opt/intelFPGA_lite/25.1/quartus/libraries/megafunctions/altram.inc                                           ;              ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; /opt/intelFPGA_lite/25.1/quartus/libraries/megafunctions/altdpram.inc                                         ;              ;
-; db/altsyncram_9f22.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/db/altsyncram_9f22.tdf           ;              ;
-; memory_76800.mif                 ; yes             ; Auto-Found Memory Initialization File  ; /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/memory_76800.mif                 ;              ;
-; db/decode_nma.tdf                ; yes             ; Auto-Generated Megafunction            ; /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/db/decode_nma.tdf                ;              ;
-; db/decode_g2a.tdf                ; yes             ; Auto-Generated Megafunction            ; /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/db/decode_g2a.tdf                ;              ;
-; db/mux_7hb.tdf                   ; yes             ; Auto-Generated Megafunction            ; /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/db/mux_7hb.tdf                   ;              ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                           ; /opt/intelFPGA_lite/25.1/quartus/libraries/megafunctions/lpm_divide.tdf                                       ;              ;
-; abs_divider.inc                  ; yes             ; Megafunction                           ; /opt/intelFPGA_lite/25.1/quartus/libraries/megafunctions/abs_divider.inc                                      ;              ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                           ; /opt/intelFPGA_lite/25.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                  ;              ;
-; db/lpm_divide_qbm.tdf            ; yes             ; Auto-Generated Megafunction            ; /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/db/lpm_divide_qbm.tdf            ;              ;
-; db/sign_div_unsign_0mh.tdf       ; yes             ; Auto-Generated Megafunction            ; /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/db/sign_div_unsign_0mh.tdf       ;              ;
-; db/alt_u_div_60f.tdf             ; yes             ; Auto-Generated Megafunction            ; /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/db/alt_u_div_60f.tdf             ;              ;
-; db/lpm_divide_t3m.tdf            ; yes             ; Auto-Generated Megafunction            ; /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/db/lpm_divide_t3m.tdf            ;              ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
++----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------+--------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                         ; Library      ;
++----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------+--------------+
+; motorPol.v                       ; yes             ; User Verilog HDL File                  ; /home/gabs/Downloads/PROJETO/PROJETO/motorPol.v                                      ;              ;
+; CLOCK_100MGH.v                   ; yes             ; User Wizard-Generated File             ; /home/gabs/Downloads/PROJETO/PROJETO/CLOCK_100MGH.v                                  ; CLOCK_100MGH ;
+; CLOCK_100MGH/CLOCK_100MGH_0002.v ; yes             ; User Verilog HDL File                  ; /home/gabs/Downloads/PROJETO/PROJETO/CLOCK_100MGH/CLOCK_100MGH_0002.v                ; CLOCK_100MGH ;
+; vga_driver.v                     ; yes             ; User Verilog HDL File                  ; /home/gabs/Downloads/PROJETO/PROJETO/vga_driver.v                                    ;              ;
+; resolucao_logica.v               ; yes             ; User Verilog HDL File                  ; /home/gabs/Downloads/PROJETO/PROJETO/resolucao_logica.v                              ;              ;
+; DE1_SOC_golden_top.v             ; yes             ; User Verilog HDL File                  ; /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v                            ;              ;
+; RAMVIDEO.v                       ; yes             ; User Wizard-Generated File             ; /home/gabs/Downloads/PROJETO/PROJETO/RAMVIDEO.v                                      ;              ;
+; contadorVid.v                    ; yes             ; User Verilog HDL File                  ; /home/gabs/Downloads/PROJETO/PROJETO/contadorVid.v                                   ;              ;
+; output_files/motorBack_Ground.v  ; yes             ; User Verilog HDL File                  ; /home/gabs/Downloads/PROJETO/PROJETO/output_files/motorBack_Ground.v                 ;              ;
+; altera_pll.v                     ; yes             ; Megafunction                           ; /home/gabs/altera_lite/25.1std/quartus/libraries/megafunctions/altera_pll.v          ;              ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; /home/gabs/altera_lite/25.1std/quartus/libraries/megafunctions/altsyncram.tdf        ;              ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; /home/gabs/altera_lite/25.1std/quartus/libraries/megafunctions/stratix_ram_block.inc ;              ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; /home/gabs/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_mux.inc           ;              ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; /home/gabs/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_decode.inc        ;              ;
+; aglobal251.inc                   ; yes             ; Megafunction                           ; /home/gabs/altera_lite/25.1std/quartus/libraries/megafunctions/aglobal251.inc        ;              ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; /home/gabs/altera_lite/25.1std/quartus/libraries/megafunctions/a_rdenreg.inc         ;              ;
+; altrom.inc                       ; yes             ; Megafunction                           ; /home/gabs/altera_lite/25.1std/quartus/libraries/megafunctions/altrom.inc            ;              ;
+; altram.inc                       ; yes             ; Megafunction                           ; /home/gabs/altera_lite/25.1std/quartus/libraries/megafunctions/altram.inc            ;              ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; /home/gabs/altera_lite/25.1std/quartus/libraries/megafunctions/altdpram.inc          ;              ;
+; db/altsyncram_9f22.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/gabs/Downloads/PROJETO/PROJETO/db/altsyncram_9f22.tdf                          ;              ;
+; memory_76800.mif                 ; yes             ; Auto-Found Memory Initialization File  ; /home/gabs/Downloads/PROJETO/PROJETO/memory_76800.mif                                ;              ;
+; db/decode_nma.tdf                ; yes             ; Auto-Generated Megafunction            ; /home/gabs/Downloads/PROJETO/PROJETO/db/decode_nma.tdf                               ;              ;
+; db/decode_g2a.tdf                ; yes             ; Auto-Generated Megafunction            ; /home/gabs/Downloads/PROJETO/PROJETO/db/decode_g2a.tdf                               ;              ;
+; db/mux_7hb.tdf                   ; yes             ; Auto-Generated Megafunction            ; /home/gabs/Downloads/PROJETO/PROJETO/db/mux_7hb.tdf                                  ;              ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                           ; /home/gabs/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_divide.tdf        ;              ;
+; abs_divider.inc                  ; yes             ; Megafunction                           ; /home/gabs/altera_lite/25.1std/quartus/libraries/megafunctions/abs_divider.inc       ;              ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                           ; /home/gabs/altera_lite/25.1std/quartus/libraries/megafunctions/sign_div_unsign.inc   ;              ;
+; db/lpm_divide_t3m.tdf            ; yes             ; Auto-Generated Megafunction            ; /home/gabs/Downloads/PROJETO/PROJETO/db/lpm_divide_t3m.tdf                           ;              ;
+; db/sign_div_unsign_0mh.tdf       ; yes             ; Auto-Generated Megafunction            ; /home/gabs/Downloads/PROJETO/PROJETO/db/sign_div_unsign_0mh.tdf                      ;              ;
+; db/alt_u_div_60f.tdf             ; yes             ; Auto-Generated Megafunction            ; /home/gabs/Downloads/PROJETO/PROJETO/db/alt_u_div_60f.tdf                            ;              ;
+; db/lpm_divide_qbm.tdf            ; yes             ; Auto-Generated Megafunction            ; /home/gabs/Downloads/PROJETO/PROJETO/db/lpm_divide_qbm.tdf                           ;              ;
++----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------+--------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -239,20 +235,20 @@ on the Quartus Prime software download page.
 +---------------------------------------------+------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                          ;
 +---------------------------------------------+------------------------------------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 346                                                                                            ;
+; Estimate of Logic utilization (ALMs needed) ; 385                                                                                            ;
 ;                                             ;                                                                                                ;
-; Combinational ALUT usage for logic          ; 605                                                                                            ;
-;     -- 7 input functions                    ; 18                                                                                             ;
-;     -- 6 input functions                    ; 68                                                                                             ;
-;     -- 5 input functions                    ; 14                                                                                             ;
-;     -- 4 input functions                    ; 99                                                                                             ;
-;     -- <=3 input functions                  ; 406                                                                                            ;
+; Combinational ALUT usage for logic          ; 659                                                                                            ;
+;     -- 7 input functions                    ; 19                                                                                             ;
+;     -- 6 input functions                    ; 91                                                                                             ;
+;     -- 5 input functions                    ; 46                                                                                             ;
+;     -- 4 input functions                    ; 89                                                                                             ;
+;     -- <=3 input functions                  ; 414                                                                                            ;
 ;                                             ;                                                                                                ;
-; Dedicated logic registers                   ; 131                                                                                            ;
+; Dedicated logic registers                   ; 132                                                                                            ;
 ;                                             ;                                                                                                ;
 ; I/O pins                                    ; 241                                                                                            ;
 ; Total MLAB memory bits                      ; 0                                                                                              ;
-; Total block memory bits                     ; 614400                                                                                         ;
+; Total block memory bits                     ; 1228800                                                                                        ;
 ;                                             ;                                                                                                ;
 ; Total DSP Blocks                            ; 0                                                                                              ;
 ;                                             ;                                                                                                ;
@@ -260,9 +256,9 @@ on the Quartus Prime software download page.
 ;     -- PLLs                                 ; 1                                                                                              ;
 ;                                             ;                                                                                                ;
 ; Maximum fan-out node                        ; CLOCK_100MGH:comb_4|CLOCK_100MGH_0002:clock_100mgh_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
-; Maximum fan-out                             ; 92                                                                                             ;
-; Total fan-out                               ; 5189                                                                                           ;
-; Average fan-out                             ; 3.72                                                                                           ;
+; Maximum fan-out                             ; 172                                                                                            ;
+; Total fan-out                               ; 7863                                                                                           ;
+; Average fan-out                             ; 5.14                                                                                           ;
 +---------------------------------------------+------------------------------------------------------------------------------------------------+
 
 
@@ -271,27 +267,32 @@ on the Quartus Prime software download page.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                ; Entity Name         ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |DE1_SOC_golden_top                          ; 605 (1)             ; 131 (0)                   ; 614400            ; 0          ; 241  ; 0            ; |DE1_SOC_golden_top                                                                                                                                                ; DE1_SOC_golden_top  ; work         ;
+; |DE1_SOC_golden_top                          ; 659 (1)             ; 132 (0)                   ; 1228800           ; 0          ; 241  ; 0            ; |DE1_SOC_golden_top                                                                                                                                                ; DE1_SOC_golden_top  ; work         ;
 ;    |CLOCK_100MGH:comb_4|                     ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|CLOCK_100MGH:comb_4                                                                                                                            ; CLOCK_100MGH        ; CLOCK_100MGH ;
 ;       |CLOCK_100MGH_0002:clock_100mgh_inst|  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|CLOCK_100MGH:comb_4|CLOCK_100MGH_0002:clock_100mgh_inst                                                                                        ; CLOCK_100MGH_0002   ; CLOCK_100MGH ;
 ;          |altera_pll:altera_pll_i|           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|CLOCK_100MGH:comb_4|CLOCK_100MGH_0002:clock_100mgh_inst|altera_pll:altera_pll_i                                                                ; altera_pll          ; work         ;
-;    |motorBack_Ground:comb_3|                 ; 474 (129)           ; 81 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|motorBack_Ground:comb_3                                                                                                                        ; motorBack_Ground    ; work         ;
-;       |contadorVid:comb_49297|               ; 345 (18)            ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|motorBack_Ground:comb_3|contadorVid:comb_49297                                                                                                 ; contadorVid         ; work         ;
-;          |lpm_divide:Div0|                   ; 124 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|motorBack_Ground:comb_3|contadorVid:comb_49297|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
-;             |lpm_divide_qbm:auto_generated|  ; 124 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|motorBack_Ground:comb_3|contadorVid:comb_49297|lpm_divide:Div0|lpm_divide_qbm:auto_generated                                                   ; lpm_divide_qbm      ; work         ;
-;                |sign_div_unsign_0mh:divider| ; 124 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|motorBack_Ground:comb_3|contadorVid:comb_49297|lpm_divide:Div0|lpm_divide_qbm:auto_generated|sign_div_unsign_0mh:divider                       ; sign_div_unsign_0mh ; work         ;
-;                   |alt_u_div_60f:divider|    ; 124 (124)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|motorBack_Ground:comb_3|contadorVid:comb_49297|lpm_divide:Div0|lpm_divide_qbm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_60f:divider ; alt_u_div_60f       ; work         ;
-;          |lpm_divide:Mod0|                   ; 203 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|motorBack_Ground:comb_3|contadorVid:comb_49297|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
-;             |lpm_divide_t3m:auto_generated|  ; 203 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|motorBack_Ground:comb_3|contadorVid:comb_49297|lpm_divide:Mod0|lpm_divide_t3m:auto_generated                                                   ; lpm_divide_t3m      ; work         ;
-;                |sign_div_unsign_0mh:divider| ; 203 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|motorBack_Ground:comb_3|contadorVid:comb_49297|lpm_divide:Mod0|lpm_divide_t3m:auto_generated|sign_div_unsign_0mh:divider                       ; sign_div_unsign_0mh ; work         ;
-;                   |alt_u_div_60f:divider|    ; 203 (203)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|motorBack_Ground:comb_3|contadorVid:comb_49297|lpm_divide:Mod0|lpm_divide_t3m:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_60f:divider ; alt_u_div_60f       ; work         ;
-;    |resolucao_logica:comb_5|                 ; 130 (20)            ; 50 (3)                    ; 614400            ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|resolucao_logica:comb_5                                                                                                                        ; resolucao_logica    ; work         ;
-;       |RAMVIDEO:comb_39|                     ; 20 (0)              ; 8 (0)                     ; 614400            ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|resolucao_logica:comb_5|RAMVIDEO:comb_39                                                                                                       ; RAMVIDEO            ; work         ;
-;          |altsyncram:altsyncram_component|   ; 20 (0)              ; 8 (0)                     ; 614400            ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|resolucao_logica:comb_5|RAMVIDEO:comb_39|altsyncram:altsyncram_component                                                                       ; altsyncram          ; work         ;
-;             |altsyncram_9f22:auto_generated| ; 20 (0)              ; 8 (8)                     ; 614400            ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|resolucao_logica:comb_5|RAMVIDEO:comb_39|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated                                        ; altsyncram_9f22     ; work         ;
-;                |decode_g2a:rden_decode_b|    ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|resolucao_logica:comb_5|RAMVIDEO:comb_39|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated|decode_g2a:rden_decode_b               ; decode_g2a          ; work         ;
-;                |decode_nma:decode2|          ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|resolucao_logica:comb_5|RAMVIDEO:comb_39|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated|decode_nma:decode2                     ; decode_nma          ; work         ;
-;       |vga_driver:comb_40|                   ; 90 (90)             ; 39 (39)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|resolucao_logica:comb_5|vga_driver:comb_40                                                                                                     ; vga_driver          ; work         ;
+;    |motorBack_Ground:comb_3|                 ; 483 (136)           ; 81 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|motorBack_Ground:comb_3                                                                                                                        ; motorBack_Ground    ; work         ;
+;       |contadorVid:comb_49580|               ; 347 (18)            ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|motorBack_Ground:comb_3|contadorVid:comb_49580                                                                                                 ; contadorVid         ; work         ;
+;          |lpm_divide:Div0|                   ; 124 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|motorBack_Ground:comb_3|contadorVid:comb_49580|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;             |lpm_divide_qbm:auto_generated|  ; 124 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|motorBack_Ground:comb_3|contadorVid:comb_49580|lpm_divide:Div0|lpm_divide_qbm:auto_generated                                                   ; lpm_divide_qbm      ; work         ;
+;                |sign_div_unsign_0mh:divider| ; 124 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|motorBack_Ground:comb_3|contadorVid:comb_49580|lpm_divide:Div0|lpm_divide_qbm:auto_generated|sign_div_unsign_0mh:divider                       ; sign_div_unsign_0mh ; work         ;
+;                   |alt_u_div_60f:divider|    ; 124 (124)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|motorBack_Ground:comb_3|contadorVid:comb_49580|lpm_divide:Div0|lpm_divide_qbm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_60f:divider ; alt_u_div_60f       ; work         ;
+;          |lpm_divide:Mod0|                   ; 205 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|motorBack_Ground:comb_3|contadorVid:comb_49580|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;             |lpm_divide_t3m:auto_generated|  ; 205 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|motorBack_Ground:comb_3|contadorVid:comb_49580|lpm_divide:Mod0|lpm_divide_t3m:auto_generated                                                   ; lpm_divide_t3m      ; work         ;
+;                |sign_div_unsign_0mh:divider| ; 205 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|motorBack_Ground:comb_3|contadorVid:comb_49580|lpm_divide:Mod0|lpm_divide_t3m:auto_generated|sign_div_unsign_0mh:divider                       ; sign_div_unsign_0mh ; work         ;
+;                   |alt_u_div_60f:divider|    ; 205 (205)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|motorBack_Ground:comb_3|contadorVid:comb_49580|lpm_divide:Mod0|lpm_divide_t3m:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_60f:divider ; alt_u_div_60f       ; work         ;
+;    |resolucao_logica:comb_5|                 ; 175 (21)            ; 51 (4)                    ; 1228800           ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|resolucao_logica:comb_5                                                                                                                        ; resolucao_logica    ; work         ;
+;       |RAMVIDEO:comb_53|                     ; 10 (0)              ; 8 (0)                     ; 614400            ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|resolucao_logica:comb_5|RAMVIDEO:comb_53                                                                                                       ; RAMVIDEO            ; work         ;
+;          |altsyncram:altsyncram_component|   ; 10 (0)              ; 8 (0)                     ; 614400            ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|resolucao_logica:comb_5|RAMVIDEO:comb_53|altsyncram:altsyncram_component                                                                       ; altsyncram          ; work         ;
+;             |altsyncram_9f22:auto_generated| ; 10 (0)              ; 8 (8)                     ; 614400            ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|resolucao_logica:comb_5|RAMVIDEO:comb_53|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated                                        ; altsyncram_9f22     ; work         ;
+;                |decode_nma:decode2|          ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|resolucao_logica:comb_5|RAMVIDEO:comb_53|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated|decode_nma:decode2                     ; decode_nma          ; work         ;
+;       |RAMVIDEO:comb_54|                     ; 28 (0)              ; 0 (0)                     ; 614400            ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|resolucao_logica:comb_5|RAMVIDEO:comb_54                                                                                                       ; RAMVIDEO            ; work         ;
+;          |altsyncram:altsyncram_component|   ; 28 (0)              ; 0 (0)                     ; 614400            ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|resolucao_logica:comb_5|RAMVIDEO:comb_54|altsyncram:altsyncram_component                                                                       ; altsyncram          ; work         ;
+;             |altsyncram_9f22:auto_generated| ; 28 (0)              ; 0 (0)                     ; 614400            ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|resolucao_logica:comb_5|RAMVIDEO:comb_54|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated                                        ; altsyncram_9f22     ; work         ;
+;                |decode_g2a:rden_decode_b|    ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|resolucao_logica:comb_5|RAMVIDEO:comb_54|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated|decode_g2a:rden_decode_b               ; decode_g2a          ; work         ;
+;                |decode_nma:decode2|          ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|resolucao_logica:comb_5|RAMVIDEO:comb_54|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated|decode_nma:decode2                     ; decode_nma          ; work         ;
+;                |mux_7hb:mux3|                ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|resolucao_logica:comb_5|RAMVIDEO:comb_54|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated|mux_7hb:mux3                           ; mux_7hb             ; work         ;
+;       |vga_driver:comb_55|                   ; 116 (116)           ; 39 (39)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC_golden_top|resolucao_logica:comb_5|vga_driver:comb_55                                                                                                     ; vga_driver          ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -301,7 +302,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------------+------------+------------------+--------------+--------------+--------------+--------------+--------+---------------------+
 ; Name                                                                                                               ; Type       ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF                 ;
 +--------------------------------------------------------------------------------------------------------------------+------------+------------------+--------------+--------------+--------------+--------------+--------+---------------------+
-; resolucao_logica:comb_5|RAMVIDEO:comb_39|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated|ALTSYNCRAM ; M10K block ; Simple Dual Port ; 76800        ; 8            ; 76800        ; 8            ; 614400 ; ../memory_76800.mif ;
+; resolucao_logica:comb_5|RAMVIDEO:comb_53|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated|ALTSYNCRAM ; M10K block ; Simple Dual Port ; 76800        ; 8            ; 76800        ; 8            ; 614400 ; ../memory_76800.mif ;
+; resolucao_logica:comb_5|RAMVIDEO:comb_54|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated|ALTSYNCRAM ; M10K block ; Simple Dual Port ; 76800        ; 8            ; 76800        ; 8            ; 614400 ; ../memory_76800.mif ;
 +--------------------------------------------------------------------------------------------------------------------+------------+------------------+--------------+--------------+--------------+--------------+--------+---------------------+
 
 
@@ -310,13 +312,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+--------------------------------------------------------------+-----------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                              ; IP Include File ;
 +--------+--------------+---------+--------------+--------------+--------------------------------------------------------------+-----------------+
-; Altera ; RAM: 2-PORT  ; 25.1    ; N/A          ; N/A          ; |DE1_SOC_golden_top|resolucao_logica:comb_5|RAMVIDEO:comb_39 ; RAMVIDEO.v      ;
+; Altera ; RAM: 2-PORT  ; 25.1    ; N/A          ; N/A          ; |DE1_SOC_golden_top|resolucao_logica:comb_5|RAMVIDEO:comb_53 ; RAMVIDEO.v      ;
+; Altera ; RAM: 2-PORT  ; 25.1    ; N/A          ; N/A          ; |DE1_SOC_golden_top|resolucao_logica:comb_5|RAMVIDEO:comb_54 ; RAMVIDEO.v      ;
 +--------+--------------+---------+--------------+--------------+--------------------------------------------------------------+-----------------+
 
 
 Encoding Type:  One-Hot
 +------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |DE1_SOC_golden_top|resolucao_logica:comb_5|vga_driver:comb_40|v_state                                 ;
+; State Machine - |DE1_SOC_golden_top|resolucao_logica:comb_5|vga_driver:comb_55|v_state                                 ;
 +------------------------+----------------------+-----------------------+-----------------------+------------------------+
 ; Name                   ; v_state.V_BACK_STATE ; v_state.V_PULSE_STATE ; v_state.V_FRONT_STATE ; v_state.V_ACTIVE_STATE ;
 +------------------------+----------------------+-----------------------+-----------------------+------------------------+
@@ -329,7 +332,7 @@ Encoding Type:  One-Hot
 
 Encoding Type:  One-Hot
 +------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |DE1_SOC_golden_top|resolucao_logica:comb_5|vga_driver:comb_40|h_state                                 ;
+; State Machine - |DE1_SOC_golden_top|resolucao_logica:comb_5|vga_driver:comb_55|h_state                                 ;
 +------------------------+----------------------+-----------------------+-----------------------+------------------------+
 ; Name                   ; h_state.H_BACK_STATE ; h_state.H_PULSE_STATE ; h_state.H_FRONT_STATE ; h_state.H_ACTIVE_STATE ;
 +------------------------+----------------------+-----------------------+-----------------------+------------------------+
@@ -345,11 +348,10 @@ Encoding Type:  One-Hot
 +------------------------------------------------------------+---------------------------------------------+
 ; Register name                                              ; Reason for Removal                          ;
 +------------------------------------------------------------+---------------------------------------------+
-; resolucao_logica:comb_5|vga_driver:comb_40|red_reg[0]      ; Stuck at GND due to stuck port data_in      ;
-; resolucao_logica:comb_5|vga_driver:comb_40|green_reg[0..4] ; Stuck at GND due to stuck port data_in      ;
-; resolucao_logica:comb_5|vga_driver:comb_40|blue_reg[0..5]  ; Stuck at GND due to stuck port data_in      ;
-; resolucao_logica:comb_5|vga_driver:comb_40|red_reg[1..4]   ; Stuck at GND due to stuck port data_in      ;
-; motorBack_Ground:comb_3|tileMap[1199][0]                   ; Stuck at GND due to stuck port data_in      ;
+; resolucao_logica:comb_5|vga_driver:comb_55|red_reg[0]      ; Stuck at GND due to stuck port data_in      ;
+; resolucao_logica:comb_5|vga_driver:comb_55|green_reg[0..4] ; Stuck at GND due to stuck port data_in      ;
+; resolucao_logica:comb_5|vga_driver:comb_55|blue_reg[0..5]  ; Stuck at GND due to stuck port data_in      ;
+; resolucao_logica:comb_5|vga_driver:comb_55|red_reg[1..4]   ; Stuck at GND due to stuck port data_in      ;
 ; motorBack_Ground:comb_3|tileMap[0][6]                      ; Stuck at GND due to stuck port data_in      ;
 ; motorBack_Ground:comb_3|tileMap[0][4]                      ; Stuck at GND due to stuck port data_in      ;
 ; motorBack_Ground:comb_3|tileMap[0][1]                      ; Stuck at GND due to stuck port data_in      ;
@@ -5149,6 +5151,7 @@ Encoding Type:  One-Hot
 ; motorBack_Ground:comb_3|tileMap[1199][6]                   ; Stuck at GND due to stuck port data_in      ;
 ; motorBack_Ground:comb_3|tileMap[1199][4]                   ; Stuck at GND due to stuck port data_in      ;
 ; motorBack_Ground:comb_3|tileMap[1199][1]                   ; Stuck at GND due to stuck port data_in      ;
+; motorBack_Ground:comb_3|tileMap[1199][0]                   ; Stuck at GND due to stuck port data_in      ;
 ; motorBack_Ground:comb_3|tileMap[512][7]                    ; Stuck at GND due to stuck port clock_enable ;
 ; motorBack_Ground:comb_3|tileMap[512][5]                    ; Stuck at GND due to stuck port clock_enable ;
 ; motorBack_Ground:comb_3|tileMap[512][3]                    ; Stuck at GND due to stuck port clock_enable ;
@@ -5345,7 +5348,7 @@ Encoding Type:  One-Hot
 ; motorBack_Ground:comb_3|tileMap[560][5]                    ; Stuck at GND due to stuck port clock_enable ;
 ; motorBack_Ground:comb_3|tileMap[560][3]                    ; Stuck at GND due to stuck port clock_enable ;
 ; motorBack_Ground:comb_3|tileMap[560][2]                    ; Stuck at GND due to stuck port clock_enable ;
-; Total Number of Removed Registers = 9568                   ;                                             ;
+; Total Number of Removed Registers = 9588                   ;                                             ;
 +------------------------------------------------------------+---------------------------------------------+
 * Table truncated at 5000 items. To change the number of removed registers reported, set the "Number of Removed Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
 
@@ -5355,7 +5358,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 131   ;
+; Total registers                              ; 132   ;
 ; Number of registers using Synchronous Clear  ; 28    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 81    ;
@@ -5370,15 +5373,24 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
-; 9:1                ; 10 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |DE1_SOC_golden_top|resolucao_logica:comb_5|vga_driver:comb_40|v_counter[6] ;
-; 9:1                ; 10 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |DE1_SOC_golden_top|resolucao_logica:comb_5|vga_driver:comb_40|h_counter[0] ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 48 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC_golden_top|resolucao_logica:comb_5|vga_driver:comb_40|green_reg[5] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |DE1_SOC_golden_top|motorBack_Ground:comb_3|Mux5                            ;
+; 9:1                ; 10 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |DE1_SOC_golden_top|resolucao_logica:comb_5|vga_driver:comb_55|v_counter[8] ;
+; 9:1                ; 10 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |DE1_SOC_golden_top|resolucao_logica:comb_5|vga_driver:comb_55|h_counter[3] ;
+; 20:1               ; 8 bits    ; 104 LEs       ; 96 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC_golden_top|resolucao_logica:comb_5|vga_driver:comb_55|red_reg[6]   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |DE1_SOC_golden_top|motorBack_Ground:comb_3|Mux4                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for resolucao_logica:comb_5|RAMVIDEO:comb_39|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated ;
+; Source assignments for resolucao_logica:comb_5|RAMVIDEO:comb_53|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                               ;
++---------------------------------+--------------------+------+------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                ;
++---------------------------------+--------------------+------+------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for resolucao_logica:comb_5|RAMVIDEO:comb_54|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated ;
 +---------------------------------+--------------------+------+------------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                               ;
 +---------------------------------+--------------------+------+------------------------------------------------------------------+
@@ -5634,7 +5646,68 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: resolucao_logica:comb_5|RAMVIDEO:comb_39|altsyncram:altsyncram_component ;
+; Parameter Settings for User Entity Instance: resolucao_logica:comb_5|RAMVIDEO:comb_53|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-----------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                      ;
++------------------------------------+----------------------+-----------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                   ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                              ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                              ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                            ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                   ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                                   ;
+; WIDTH_A                            ; 8                    ; Signed Integer                                            ;
+; WIDTHAD_A                          ; 17                   ; Signed Integer                                            ;
+; NUMWORDS_A                         ; 76800                ; Signed Integer                                            ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                   ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                   ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                   ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                   ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                   ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                   ;
+; WIDTH_B                            ; 8                    ; Signed Integer                                            ;
+; WIDTHAD_B                          ; 17                   ; Signed Integer                                            ;
+; NUMWORDS_B                         ; 76800                ; Signed Integer                                            ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                   ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                   ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                   ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                                                   ;
+; OUTDATA_REG_B                      ; CLOCK0               ; Untyped                                                   ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                   ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                   ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                   ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                   ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                   ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                   ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                   ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                            ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                   ;
+; RAM_BLOCK_TYPE                     ; M10K                 ; Untyped                                                   ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                   ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                   ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                   ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                   ;
+; INIT_FILE                          ; ../memory_76800.mif  ; Untyped                                                   ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                   ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                   ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                   ;
+; CLOCK_ENABLE_INPUT_B               ; BYPASS               ; Untyped                                                   ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                                   ;
+; CLOCK_ENABLE_OUTPUT_B              ; BYPASS               ; Untyped                                                   ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                   ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                   ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                   ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                   ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                   ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                                   ;
+; CBXI_PARAMETER                     ; altsyncram_9f22      ; Untyped                                                   ;
++------------------------------------+----------------------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: resolucao_logica:comb_5|RAMVIDEO:comb_54|altsyncram:altsyncram_component ;
 +------------------------------------+----------------------+-----------------------------------------------------------+
 ; Parameter Name                     ; Value                ; Type                                                      ;
 +------------------------------------+----------------------+-----------------------------------------------------------+
@@ -5695,7 +5768,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: resolucao_logica:comb_5|vga_driver:comb_40 ;
+; Parameter Settings for User Entity Instance: resolucao_logica:comb_5|vga_driver:comb_55 ;
 +----------------+------------+-----------------------------------------------------------+
 ; Parameter Name ; Value      ; Type                                                      ;
 +----------------+------------+-----------------------------------------------------------+
@@ -5722,30 +5795,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: motorBack_Ground:comb_3|contadorVid:comb_49297|lpm_divide:Div0 ;
-+------------------------+----------------+-----------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                  ;
-+------------------------+----------------+-----------------------------------------------------------------------+
-; LPM_WIDTHN             ; 17             ; Untyped                                                               ;
-; LPM_WIDTHD             ; 9              ; Untyped                                                               ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                               ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                               ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                               ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                               ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                               ;
-; CBXI_PARAMETER         ; lpm_divide_qbm ; Untyped                                                               ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                               ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                               ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                            ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                          ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                          ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                        ;
-+------------------------+----------------+-----------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: motorBack_Ground:comb_3|contadorVid:comb_49297|lpm_divide:Mod0 ;
+; Parameter Settings for Inferred Entity Instance: motorBack_Ground:comb_3|contadorVid:comb_49580|lpm_divide:Mod0 ;
 +------------------------+----------------+-----------------------------------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                                                  ;
 +------------------------+----------------+-----------------------------------------------------------------------+
@@ -5767,13 +5817,47 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: motorBack_Ground:comb_3|contadorVid:comb_49580|lpm_divide:Div0 ;
++------------------------+----------------+-----------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                  ;
++------------------------+----------------+-----------------------------------------------------------------------+
+; LPM_WIDTHN             ; 17             ; Untyped                                                               ;
+; LPM_WIDTHD             ; 9              ; Untyped                                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                               ;
+; CBXI_PARAMETER         ; lpm_divide_qbm ; Untyped                                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                        ;
++------------------------+----------------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                                                     ;
 +-------------------------------------------+--------------------------------------------------------------------------+
 ; Name                                      ; Value                                                                    ;
 +-------------------------------------------+--------------------------------------------------------------------------+
-; Number of entity instances                ; 1                                                                        ;
-; Entity Instance                           ; resolucao_logica:comb_5|RAMVIDEO:comb_39|altsyncram:altsyncram_component ;
+; Number of entity instances                ; 2                                                                        ;
+; Entity Instance                           ; resolucao_logica:comb_5|RAMVIDEO:comb_53|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                                                ;
+;     -- WIDTH_A                            ; 8                                                                        ;
+;     -- NUMWORDS_A                         ; 76800                                                                    ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                             ;
+;     -- WIDTH_B                            ; 8                                                                        ;
+;     -- NUMWORDS_B                         ; 76800                                                                    ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                                   ;
+;     -- OUTDATA_REG_B                      ; CLOCK0                                                                   ;
+;     -- RAM_BLOCK_TYPE                     ; M10K                                                                     ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                ;
+; Entity Instance                           ; resolucao_logica:comb_5|RAMVIDEO:comb_54|altsyncram:altsyncram_component ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                                                ;
 ;     -- WIDTH_A                            ; 8                                                                        ;
 ;     -- NUMWORDS_A                         ; 76800                                                                    ;
@@ -5788,7 +5872,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "resolucao_logica:comb_5|vga_driver:comb_40"                                              ;
+; Port Connectivity Checks: "resolucao_logica:comb_5|vga_driver:comb_55"                                              ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port      ; Type   ; Severity ; Details                                                                             ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -5821,7 +5905,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "motorBack_Ground:comb_3|contadorVid:comb_49297"                                        ;
+; Port Connectivity Checks: "motorBack_Ground:comb_3|contadorVid:comb_49580"                                        ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port    ; Type   ; Severity ; Details                                                                             ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
@@ -5854,40 +5938,39 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 131                         ;
+; arriav_ff             ; 132                         ;
 ;     CLR               ; 81                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 18                          ;
-;     plain             ; 22                          ;
+;     plain             ; 23                          ;
 ; arriav_io_obuf        ; 96                          ;
-; arriav_lcell_comb     ; 605                         ;
-;     arith             ; 210                         ;
+; arriav_lcell_comb     ; 659                         ;
+;     arith             ; 218                         ;
 ;         0 data inputs ; 28                          ;
-;         1 data inputs ; 48                          ;
+;         1 data inputs ; 50                          ;
 ;         2 data inputs ; 15                          ;
 ;         3 data inputs ; 72                          ;
-;         4 data inputs ; 47                          ;
-;     extend            ; 18                          ;
-;         7 data inputs ; 18                          ;
-;     normal            ; 349                         ;
+;         4 data inputs ; 51                          ;
+;         5 data inputs ; 2                           ;
+;     extend            ; 19                          ;
+;         7 data inputs ; 19                          ;
+;     normal            ; 402                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 106                         ;
-;         3 data inputs ; 107                         ;
-;         4 data inputs ; 50                          ;
-;         5 data inputs ; 14                          ;
-;         6 data inputs ; 68                          ;
-;     shared            ; 28                          ;
-;         0 data inputs ; 3                           ;
-;         1 data inputs ; 20                          ;
-;         2 data inputs ; 3                           ;
-;         4 data inputs ; 2                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 111                         ;
+;         3 data inputs ; 113                         ;
+;         4 data inputs ; 38                          ;
+;         5 data inputs ; 44                          ;
+;         6 data inputs ; 91                          ;
+;     shared            ; 20                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 18                          ;
 ; boundary_port         ; 241                         ;
 ; generic_pll           ; 1                           ;
-; stratixv_ram_block    ; 80                          ;
+; stratixv_ram_block    ; 160                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 23.20                       ;
-; Average LUT depth     ; 10.22                       ;
+; Average LUT depth     ; 9.61                        ;
 +-----------------------+-----------------------------+
 
 
@@ -5906,87 +5989,94 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Mon Aug 31 17:11:35 2026
+    Info: Processing started: Mon Aug 31 21:12:05 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CoprocessadorGrafico -c CoprocessadorGrafico
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file motorPol.v
-    Info (12023): Found entity 1: motorPol File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/motorPol.v Line: 1
+    Info (12023): Found entity 1: motorPol File: /home/gabs/Downloads/PROJETO/PROJETO/motorPol.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file CLOCK_100MGH.v
-    Info (12023): Found entity 1: CLOCK_100MGH File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/CLOCK_100MGH.v Line: 8
+    Info (12023): Found entity 1: CLOCK_100MGH File: /home/gabs/Downloads/PROJETO/PROJETO/CLOCK_100MGH.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file CLOCK_100MGH/CLOCK_100MGH_0002.v
-    Info (12023): Found entity 1: CLOCK_100MGH_0002 File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/CLOCK_100MGH/CLOCK_100MGH_0002.v Line: 2
+    Info (12023): Found entity 1: CLOCK_100MGH_0002 File: /home/gabs/Downloads/PROJETO/PROJETO/CLOCK_100MGH/CLOCK_100MGH_0002.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file vga_driver.v
-    Info (12023): Found entity 1: vga_driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/vga_driver.v Line: 1
+    Info (12023): Found entity 1: vga_driver File: /home/gabs/Downloads/PROJETO/PROJETO/vga_driver.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file resolucao_logica.v
-    Info (12023): Found entity 1: resolucao_logica File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/resolucao_logica.v Line: 1
+    Info (12023): Found entity 1: resolucao_logica File: /home/gabs/Downloads/PROJETO/PROJETO/resolucao_logica.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file poligono_gerador.v
-    Info (12023): Found entity 1: poligono_gerador File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/poligono_gerador.v Line: 1
+    Info (12023): Found entity 1: poligono_gerador File: /home/gabs/Downloads/PROJETO/PROJETO/poligono_gerador.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file DE1_SOC_golden_top.v
-    Info (12023): Found entity 1: DE1_SOC_golden_top File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 54
+    Info (12023): Found entity 1: DE1_SOC_golden_top File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 54
 Info (12021): Found 1 design units, including 1 entities, in source file RAMVIDEO.v
-    Info (12023): Found entity 1: RAMVIDEO File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/RAMVIDEO.v Line: 40
+    Info (12023): Found entity 1: RAMVIDEO File: /home/gabs/Downloads/PROJETO/PROJETO/RAMVIDEO.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file contadorVid.v
-    Info (12023): Found entity 1: contadorVid File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/contadorVid.v Line: 1
+    Info (12023): Found entity 1: contadorVid File: /home/gabs/Downloads/PROJETO/PROJETO/contadorVid.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file MEF_geral_layer.v
-    Info (12023): Found entity 1: MEF_geral_layer File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/MEF_geral_layer.v Line: 1
+    Info (12023): Found entity 1: MEF_geral_layer File: /home/gabs/Downloads/PROJETO/PROJETO/MEF_geral_layer.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/motorBack_Ground.v
-    Info (12023): Found entity 1: motorBack_Ground File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/output_files/motorBack_Ground.v Line: 1
+    Info (12023): Found entity 1: motorBack_Ground File: /home/gabs/Downloads/PROJETO/PROJETO/output_files/motorBack_Ground.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file background_ram.v
-    Info (12023): Found entity 1: background_ram File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/background_ram.v Line: 40
-Warning (10236): Verilog HDL Implicit Net warning at motorPol.v(154): created implicit net for "address" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/motorPol.v Line: 154
-Warning (10236): Verilog HDL Implicit Net warning at DE1_SOC_golden_top.v(308): created implicit net for "locked" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 308
-Critical Warning (10846): Verilog HDL Instantiation warning at motorPol.v(68): instance has no name File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/motorPol.v Line: 68
-Critical Warning (10846): Verilog HDL Instantiation warning at motorPol.v(90): instance has no name File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/motorPol.v Line: 90
-Critical Warning (10846): Verilog HDL Instantiation warning at motorPol.v(112): instance has no name File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/motorPol.v Line: 112
-Critical Warning (10846): Verilog HDL Instantiation warning at motorPol.v(134): instance has no name File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/motorPol.v Line: 134
-Critical Warning (10846): Verilog HDL Instantiation warning at motorPol.v(156): instance has no name File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/motorPol.v Line: 156
-Critical Warning (10846): Verilog HDL Instantiation warning at resolucao_logica.v(48): instance has no name File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/resolucao_logica.v Line: 48
-Critical Warning (10846): Verilog HDL Instantiation warning at resolucao_logica.v(65): instance has no name File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/resolucao_logica.v Line: 65
-Critical Warning (10846): Verilog HDL Instantiation warning at motorBack_Ground.v(58): instance has no name File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/output_files/motorBack_Ground.v Line: 58
-Critical Warning (10846): Verilog HDL Instantiation warning at DE1_SOC_golden_top.v(288): instance has no name File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 288
-Critical Warning (10846): Verilog HDL Instantiation warning at DE1_SOC_golden_top.v(308): instance has no name File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 308
-Critical Warning (10846): Verilog HDL Instantiation warning at DE1_SOC_golden_top.v(326): instance has no name File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 326
+    Info (12023): Found entity 1: background_ram File: /home/gabs/Downloads/PROJETO/PROJETO/background_ram.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at motorPol.v(154): created implicit net for "address" File: /home/gabs/Downloads/PROJETO/PROJETO/motorPol.v Line: 154
+Warning (10236): Verilog HDL Implicit Net warning at DE1_SOC_golden_top.v(308): created implicit net for "locked" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 308
+Critical Warning (10846): Verilog HDL Instantiation warning at motorPol.v(68): instance has no name File: /home/gabs/Downloads/PROJETO/PROJETO/motorPol.v Line: 68
+Critical Warning (10846): Verilog HDL Instantiation warning at motorPol.v(90): instance has no name File: /home/gabs/Downloads/PROJETO/PROJETO/motorPol.v Line: 90
+Critical Warning (10846): Verilog HDL Instantiation warning at motorPol.v(112): instance has no name File: /home/gabs/Downloads/PROJETO/PROJETO/motorPol.v Line: 112
+Critical Warning (10846): Verilog HDL Instantiation warning at motorPol.v(134): instance has no name File: /home/gabs/Downloads/PROJETO/PROJETO/motorPol.v Line: 134
+Critical Warning (10846): Verilog HDL Instantiation warning at motorPol.v(156): instance has no name File: /home/gabs/Downloads/PROJETO/PROJETO/motorPol.v Line: 156
+Critical Warning (10846): Verilog HDL Instantiation warning at resolucao_logica.v(69): instance has no name File: /home/gabs/Downloads/PROJETO/PROJETO/resolucao_logica.v Line: 69
+Critical Warning (10846): Verilog HDL Instantiation warning at resolucao_logica.v(78): instance has no name File: /home/gabs/Downloads/PROJETO/PROJETO/resolucao_logica.v Line: 78
+Critical Warning (10846): Verilog HDL Instantiation warning at resolucao_logica.v(98): instance has no name File: /home/gabs/Downloads/PROJETO/PROJETO/resolucao_logica.v Line: 98
+Critical Warning (10846): Verilog HDL Instantiation warning at motorBack_Ground.v(97): instance has no name File: /home/gabs/Downloads/PROJETO/PROJETO/output_files/motorBack_Ground.v Line: 97
+Critical Warning (10846): Verilog HDL Instantiation warning at DE1_SOC_golden_top.v(288): instance has no name File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 288
+Critical Warning (10846): Verilog HDL Instantiation warning at DE1_SOC_golden_top.v(308): instance has no name File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 308
+Critical Warning (10846): Verilog HDL Instantiation warning at DE1_SOC_golden_top.v(326): instance has no name File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 326
 Info (12127): Elaborating entity "DE1_SOC_golden_top" for the top level hierarchy
-Warning (10034): Output port "DRAM_ADDR" at DE1_SOC_golden_top.v(100) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 100
-Warning (10034): Output port "DRAM_BA" at DE1_SOC_golden_top.v(101) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 101
-Warning (10034): Output port "HEX0" at DE1_SOC_golden_top.v(133) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 133
-Warning (10034): Output port "HEX1" at DE1_SOC_golden_top.v(134) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 134
-Warning (10034): Output port "HEX2" at DE1_SOC_golden_top.v(135) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 135
-Warning (10034): Output port "HEX3" at DE1_SOC_golden_top.v(136) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 136
-Warning (10034): Output port "HEX4" at DE1_SOC_golden_top.v(137) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 137
-Warning (10034): Output port "HEX5" at DE1_SOC_golden_top.v(138) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 138
-Warning (10034): Output port "LEDR" at DE1_SOC_golden_top.v(210) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 210
-Warning (10034): Output port "ADC_CONVST" at DE1_SOC_golden_top.v(59) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 59
-Warning (10034): Output port "ADC_DIN" at DE1_SOC_golden_top.v(60) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 60
-Warning (10034): Output port "ADC_SCLK" at DE1_SOC_golden_top.v(62) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 62
-Warning (10034): Output port "AUD_DACDAT" at DE1_SOC_golden_top.v(72) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 72
-Warning (10034): Output port "AUD_XCK" at DE1_SOC_golden_top.v(74) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 74
-Warning (10034): Output port "DRAM_CAS_N" at DE1_SOC_golden_top.v(102) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 102
-Warning (10034): Output port "DRAM_CKE" at DE1_SOC_golden_top.v(103) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 103
-Warning (10034): Output port "DRAM_CLK" at DE1_SOC_golden_top.v(104) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 104
-Warning (10034): Output port "DRAM_CS_N" at DE1_SOC_golden_top.v(105) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 105
-Warning (10034): Output port "DRAM_LDQM" at DE1_SOC_golden_top.v(107) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 107
-Warning (10034): Output port "DRAM_RAS_N" at DE1_SOC_golden_top.v(108) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 108
-Warning (10034): Output port "DRAM_UDQM" at DE1_SOC_golden_top.v(109) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 109
-Warning (10034): Output port "DRAM_WE_N" at DE1_SOC_golden_top.v(110) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 110
-Warning (10034): Output port "FAN_CTRL" at DE1_SOC_golden_top.v(115) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 115
-Warning (10034): Output port "FPGA_I2C_SCLK" at DE1_SOC_golden_top.v(120) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 120
-Warning (10034): Output port "IRDA_TXD" at DE1_SOC_golden_top.v(200) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 200
-Warning (10034): Output port "TD_RESET_N" at DE1_SOC_golden_top.v(231) has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 231
-Info (12128): Elaborating entity "motorBack_Ground" for hierarchy "motorBack_Ground:comb_3" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 288
-Warning (10240): Verilog HDL Always Construct warning at motorBack_Ground.v(36): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/output_files/motorBack_Ground.v Line: 36
-Info (12128): Elaborating entity "contadorVid" for hierarchy "motorBack_Ground:comb_3|contadorVid:comb_49297" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/output_files/motorBack_Ground.v Line: 58
-Warning (10036): Verilog HDL or VHDL warning at contadorVid.v(11): object "contando" assigned a value but never read File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/contadorVid.v Line: 11
-Warning (10230): Verilog HDL assignment warning at contadorVid.v(26): truncated value with size 32 to match size of target (17) File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/contadorVid.v Line: 26
-Warning (10230): Verilog HDL assignment warning at contadorVid.v(40): truncated value with size 32 to match size of target (8) File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/contadorVid.v Line: 40
-Warning (10230): Verilog HDL assignment warning at contadorVid.v(41): truncated value with size 32 to match size of target (9) File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/contadorVid.v Line: 41
-Info (12128): Elaborating entity "CLOCK_100MGH" for hierarchy "CLOCK_100MGH:comb_4" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 308
-Info (12128): Elaborating entity "CLOCK_100MGH_0002" for hierarchy "CLOCK_100MGH:comb_4|CLOCK_100MGH_0002:clock_100mgh_inst" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/CLOCK_100MGH.v Line: 20
-Info (12128): Elaborating entity "altera_pll" for hierarchy "CLOCK_100MGH:comb_4|CLOCK_100MGH_0002:clock_100mgh_inst|altera_pll:altera_pll_i" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/CLOCK_100MGH/CLOCK_100MGH_0002.v Line: 85
+Warning (10034): Output port "DRAM_ADDR" at DE1_SOC_golden_top.v(100) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 100
+Warning (10034): Output port "DRAM_BA" at DE1_SOC_golden_top.v(101) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 101
+Warning (10034): Output port "HEX0" at DE1_SOC_golden_top.v(133) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 133
+Warning (10034): Output port "HEX1" at DE1_SOC_golden_top.v(134) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 134
+Warning (10034): Output port "HEX2" at DE1_SOC_golden_top.v(135) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 135
+Warning (10034): Output port "HEX3" at DE1_SOC_golden_top.v(136) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 136
+Warning (10034): Output port "HEX4" at DE1_SOC_golden_top.v(137) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 137
+Warning (10034): Output port "HEX5" at DE1_SOC_golden_top.v(138) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 138
+Warning (10034): Output port "LEDR" at DE1_SOC_golden_top.v(210) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 210
+Warning (10034): Output port "ADC_CONVST" at DE1_SOC_golden_top.v(59) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 59
+Warning (10034): Output port "ADC_DIN" at DE1_SOC_golden_top.v(60) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 60
+Warning (10034): Output port "ADC_SCLK" at DE1_SOC_golden_top.v(62) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 62
+Warning (10034): Output port "AUD_DACDAT" at DE1_SOC_golden_top.v(72) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 72
+Warning (10034): Output port "AUD_XCK" at DE1_SOC_golden_top.v(74) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 74
+Warning (10034): Output port "DRAM_CAS_N" at DE1_SOC_golden_top.v(102) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 102
+Warning (10034): Output port "DRAM_CKE" at DE1_SOC_golden_top.v(103) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 103
+Warning (10034): Output port "DRAM_CLK" at DE1_SOC_golden_top.v(104) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 104
+Warning (10034): Output port "DRAM_CS_N" at DE1_SOC_golden_top.v(105) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 105
+Warning (10034): Output port "DRAM_LDQM" at DE1_SOC_golden_top.v(107) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 107
+Warning (10034): Output port "DRAM_RAS_N" at DE1_SOC_golden_top.v(108) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 108
+Warning (10034): Output port "DRAM_UDQM" at DE1_SOC_golden_top.v(109) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 109
+Warning (10034): Output port "DRAM_WE_N" at DE1_SOC_golden_top.v(110) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 110
+Warning (10034): Output port "FAN_CTRL" at DE1_SOC_golden_top.v(115) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 115
+Warning (10034): Output port "FPGA_I2C_SCLK" at DE1_SOC_golden_top.v(120) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 120
+Warning (10034): Output port "IRDA_TXD" at DE1_SOC_golden_top.v(200) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 200
+Warning (10034): Output port "TD_RESET_N" at DE1_SOC_golden_top.v(231) has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 231
+Info (12128): Elaborating entity "motorBack_Ground" for hierarchy "motorBack_Ground:comb_3" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 288
+Warning (10230): Verilog HDL assignment warning at motorBack_Ground.v(32): truncated value with size 32 to match size of target (6) File: /home/gabs/Downloads/PROJETO/PROJETO/output_files/motorBack_Ground.v Line: 32
+Warning (10230): Verilog HDL assignment warning at motorBack_Ground.v(33): truncated value with size 32 to match size of target (6) File: /home/gabs/Downloads/PROJETO/PROJETO/output_files/motorBack_Ground.v Line: 33
+Warning (10230): Verilog HDL assignment warning at motorBack_Ground.v(54): truncated value with size 32 to match size of target (6) File: /home/gabs/Downloads/PROJETO/PROJETO/output_files/motorBack_Ground.v Line: 54
+Warning (10230): Verilog HDL assignment warning at motorBack_Ground.v(61): truncated value with size 32 to match size of target (6) File: /home/gabs/Downloads/PROJETO/PROJETO/output_files/motorBack_Ground.v Line: 61
+Warning (10230): Verilog HDL assignment warning at motorBack_Ground.v(68): truncated value with size 32 to match size of target (6) File: /home/gabs/Downloads/PROJETO/PROJETO/output_files/motorBack_Ground.v Line: 68
+Warning (10230): Verilog HDL assignment warning at motorBack_Ground.v(75): truncated value with size 32 to match size of target (6) File: /home/gabs/Downloads/PROJETO/PROJETO/output_files/motorBack_Ground.v Line: 75
+Warning (10240): Verilog HDL Always Construct warning at motorBack_Ground.v(39): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct File: /home/gabs/Downloads/PROJETO/PROJETO/output_files/motorBack_Ground.v Line: 39
+Info (12128): Elaborating entity "contadorVid" for hierarchy "motorBack_Ground:comb_3|contadorVid:comb_49580" File: /home/gabs/Downloads/PROJETO/PROJETO/output_files/motorBack_Ground.v Line: 97
+Warning (10036): Verilog HDL or VHDL warning at contadorVid.v(11): object "contando" assigned a value but never read File: /home/gabs/Downloads/PROJETO/PROJETO/contadorVid.v Line: 11
+Warning (10230): Verilog HDL assignment warning at contadorVid.v(26): truncated value with size 32 to match size of target (17) File: /home/gabs/Downloads/PROJETO/PROJETO/contadorVid.v Line: 26
+Warning (10230): Verilog HDL assignment warning at contadorVid.v(40): truncated value with size 32 to match size of target (8) File: /home/gabs/Downloads/PROJETO/PROJETO/contadorVid.v Line: 40
+Warning (10230): Verilog HDL assignment warning at contadorVid.v(41): truncated value with size 32 to match size of target (9) File: /home/gabs/Downloads/PROJETO/PROJETO/contadorVid.v Line: 41
+Info (12128): Elaborating entity "CLOCK_100MGH" for hierarchy "CLOCK_100MGH:comb_4" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 308
+Info (12128): Elaborating entity "CLOCK_100MGH_0002" for hierarchy "CLOCK_100MGH:comb_4|CLOCK_100MGH_0002:clock_100mgh_inst" File: /home/gabs/Downloads/PROJETO/PROJETO/CLOCK_100MGH.v Line: 20
+Info (12128): Elaborating entity "altera_pll" for hierarchy "CLOCK_100MGH:comb_4|CLOCK_100MGH_0002:clock_100mgh_inst|altera_pll:altera_pll_i" File: /home/gabs/Downloads/PROJETO/PROJETO/CLOCK_100MGH/CLOCK_100MGH_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "CLOCK_100MGH:comb_4|CLOCK_100MGH_0002:clock_100mgh_inst|altera_pll:altera_pll_i" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/CLOCK_100MGH/CLOCK_100MGH_0002.v Line: 85
-Info (12133): Instantiated megafunction "CLOCK_100MGH:comb_4|CLOCK_100MGH_0002:clock_100mgh_inst|altera_pll:altera_pll_i" with the following parameter: File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/CLOCK_100MGH/CLOCK_100MGH_0002.v Line: 85
+Info (12130): Elaborated megafunction instantiation "CLOCK_100MGH:comb_4|CLOCK_100MGH_0002:clock_100mgh_inst|altera_pll:altera_pll_i" File: /home/gabs/Downloads/PROJETO/PROJETO/CLOCK_100MGH/CLOCK_100MGH_0002.v Line: 85
+Info (12133): Instantiated megafunction "CLOCK_100MGH:comb_4|CLOCK_100MGH_0002:clock_100mgh_inst|altera_pll:altera_pll_i" with the following parameter: File: /home/gabs/Downloads/PROJETO/PROJETO/CLOCK_100MGH/CLOCK_100MGH_0002.v Line: 85
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
     Info (12134): Parameter "operation_mode" = "direct"
@@ -6047,14 +6137,14 @@ Info (12133): Instantiated megafunction "CLOCK_100MGH:comb_4|CLOCK_100MGH_0002:c
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "resolucao_logica" for hierarchy "resolucao_logica:comb_5" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 326
-Warning (10230): Verilog HDL assignment warning at resolucao_logica.v(25): truncated value with size 32 to match size of target (9) File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/resolucao_logica.v Line: 25
-Warning (10230): Verilog HDL assignment warning at resolucao_logica.v(26): truncated value with size 32 to match size of target (8) File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/resolucao_logica.v Line: 26
-Warning (10230): Verilog HDL assignment warning at resolucao_logica.v(40): truncated value with size 32 to match size of target (17) File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/resolucao_logica.v Line: 40
-Info (12128): Elaborating entity "RAMVIDEO" for hierarchy "resolucao_logica:comb_5|RAMVIDEO:comb_39" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/resolucao_logica.v Line: 48
-Info (12128): Elaborating entity "altsyncram" for hierarchy "resolucao_logica:comb_5|RAMVIDEO:comb_39|altsyncram:altsyncram_component" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/RAMVIDEO.v Line: 89
-Info (12130): Elaborated megafunction instantiation "resolucao_logica:comb_5|RAMVIDEO:comb_39|altsyncram:altsyncram_component" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/RAMVIDEO.v Line: 89
-Info (12133): Instantiated megafunction "resolucao_logica:comb_5|RAMVIDEO:comb_39|altsyncram:altsyncram_component" with the following parameter: File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/RAMVIDEO.v Line: 89
+Info (12128): Elaborating entity "resolucao_logica" for hierarchy "resolucao_logica:comb_5" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 326
+Warning (10230): Verilog HDL assignment warning at resolucao_logica.v(32): truncated value with size 32 to match size of target (9) File: /home/gabs/Downloads/PROJETO/PROJETO/resolucao_logica.v Line: 32
+Warning (10230): Verilog HDL assignment warning at resolucao_logica.v(33): truncated value with size 32 to match size of target (8) File: /home/gabs/Downloads/PROJETO/PROJETO/resolucao_logica.v Line: 33
+Warning (10230): Verilog HDL assignment warning at resolucao_logica.v(49): truncated value with size 32 to match size of target (17) File: /home/gabs/Downloads/PROJETO/PROJETO/resolucao_logica.v Line: 49
+Info (12128): Elaborating entity "RAMVIDEO" for hierarchy "resolucao_logica:comb_5|RAMVIDEO:comb_53" File: /home/gabs/Downloads/PROJETO/PROJETO/resolucao_logica.v Line: 69
+Info (12128): Elaborating entity "altsyncram" for hierarchy "resolucao_logica:comb_5|RAMVIDEO:comb_53|altsyncram:altsyncram_component" File: /home/gabs/Downloads/PROJETO/PROJETO/RAMVIDEO.v Line: 89
+Info (12130): Elaborated megafunction instantiation "resolucao_logica:comb_5|RAMVIDEO:comb_53|altsyncram:altsyncram_component" File: /home/gabs/Downloads/PROJETO/PROJETO/RAMVIDEO.v Line: 89
+Info (12133): Instantiated megafunction "resolucao_logica:comb_5|RAMVIDEO:comb_53|altsyncram:altsyncram_component" with the following parameter: File: /home/gabs/Downloads/PROJETO/PROJETO/RAMVIDEO.v Line: 89
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK0"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
@@ -6077,281 +6167,281 @@ Info (12133): Instantiated megafunction "resolucao_logica:comb_5|RAMVIDEO:comb_3
     Info (12134): Parameter "width_b" = "8"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_9f22.tdf
-    Info (12023): Found entity 1: altsyncram_9f22 File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/db/altsyncram_9f22.tdf Line: 34
-Info (12128): Elaborating entity "altsyncram_9f22" for hierarchy "resolucao_logica:comb_5|RAMVIDEO:comb_39|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated" File: /opt/intelFPGA_lite/25.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+    Info (12023): Found entity 1: altsyncram_9f22 File: /home/gabs/Downloads/PROJETO/PROJETO/db/altsyncram_9f22.tdf Line: 34
+Info (12128): Elaborating entity "altsyncram_9f22" for hierarchy "resolucao_logica:comb_5|RAMVIDEO:comb_53|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated" File: /home/gabs/altera_lite/25.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_nma.tdf
-    Info (12023): Found entity 1: decode_nma File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/db/decode_nma.tdf Line: 23
-Info (12128): Elaborating entity "decode_nma" for hierarchy "resolucao_logica:comb_5|RAMVIDEO:comb_39|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated|decode_nma:decode2" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/db/altsyncram_9f22.tdf Line: 46
+    Info (12023): Found entity 1: decode_nma File: /home/gabs/Downloads/PROJETO/PROJETO/db/decode_nma.tdf Line: 23
+Info (12128): Elaborating entity "decode_nma" for hierarchy "resolucao_logica:comb_5|RAMVIDEO:comb_53|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated|decode_nma:decode2" File: /home/gabs/Downloads/PROJETO/PROJETO/db/altsyncram_9f22.tdf Line: 46
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_g2a.tdf
-    Info (12023): Found entity 1: decode_g2a File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/db/decode_g2a.tdf Line: 23
-Info (12128): Elaborating entity "decode_g2a" for hierarchy "resolucao_logica:comb_5|RAMVIDEO:comb_39|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated|decode_g2a:rden_decode_b" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/db/altsyncram_9f22.tdf Line: 47
+    Info (12023): Found entity 1: decode_g2a File: /home/gabs/Downloads/PROJETO/PROJETO/db/decode_g2a.tdf Line: 23
+Info (12128): Elaborating entity "decode_g2a" for hierarchy "resolucao_logica:comb_5|RAMVIDEO:comb_53|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated|decode_g2a:rden_decode_b" File: /home/gabs/Downloads/PROJETO/PROJETO/db/altsyncram_9f22.tdf Line: 47
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_7hb.tdf
-    Info (12023): Found entity 1: mux_7hb File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/db/mux_7hb.tdf Line: 23
-Info (12128): Elaborating entity "mux_7hb" for hierarchy "resolucao_logica:comb_5|RAMVIDEO:comb_39|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated|mux_7hb:mux3" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/db/altsyncram_9f22.tdf Line: 49
-Info (12128): Elaborating entity "vga_driver" for hierarchy "resolucao_logica:comb_5|vga_driver:comb_40" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/resolucao_logica.v Line: 65
+    Info (12023): Found entity 1: mux_7hb File: /home/gabs/Downloads/PROJETO/PROJETO/db/mux_7hb.tdf Line: 23
+Info (12128): Elaborating entity "mux_7hb" for hierarchy "resolucao_logica:comb_5|RAMVIDEO:comb_53|altsyncram:altsyncram_component|altsyncram_9f22:auto_generated|mux_7hb:mux3" File: /home/gabs/Downloads/PROJETO/PROJETO/db/altsyncram_9f22.tdf Line: 49
+Info (12128): Elaborating entity "vga_driver" for hierarchy "resolucao_logica:comb_5|vga_driver:comb_55" File: /home/gabs/Downloads/PROJETO/PROJETO/resolucao_logica.v Line: 98
 Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "motorBack_Ground:comb_3|contadorVid:comb_49297|Div0" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/contadorVid.v Line: 40
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "motorBack_Ground:comb_3|contadorVid:comb_49297|Mod0" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/contadorVid.v Line: 41
-Info (12130): Elaborated megafunction instantiation "motorBack_Ground:comb_3|contadorVid:comb_49297|lpm_divide:Div0" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/contadorVid.v Line: 40
-Info (12133): Instantiated megafunction "motorBack_Ground:comb_3|contadorVid:comb_49297|lpm_divide:Div0" with the following parameter: File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/contadorVid.v Line: 40
-    Info (12134): Parameter "LPM_WIDTHN" = "17"
-    Info (12134): Parameter "LPM_WIDTHD" = "9"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_qbm.tdf
-    Info (12023): Found entity 1: lpm_divide_qbm File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/db/lpm_divide_qbm.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_0mh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_0mh File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/db/sign_div_unsign_0mh.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_60f.tdf
-    Info (12023): Found entity 1: alt_u_div_60f File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/db/alt_u_div_60f.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "motorBack_Ground:comb_3|contadorVid:comb_49297|lpm_divide:Mod0" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/contadorVid.v Line: 41
-Info (12133): Instantiated megafunction "motorBack_Ground:comb_3|contadorVid:comb_49297|lpm_divide:Mod0" with the following parameter: File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/contadorVid.v Line: 41
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "motorBack_Ground:comb_3|contadorVid:comb_49580|Mod0" File: /home/gabs/Downloads/PROJETO/PROJETO/contadorVid.v Line: 41
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "motorBack_Ground:comb_3|contadorVid:comb_49580|Div0" File: /home/gabs/Downloads/PROJETO/PROJETO/contadorVid.v Line: 40
+Info (12130): Elaborated megafunction instantiation "motorBack_Ground:comb_3|contadorVid:comb_49580|lpm_divide:Mod0" File: /home/gabs/Downloads/PROJETO/PROJETO/contadorVid.v Line: 41
+Info (12133): Instantiated megafunction "motorBack_Ground:comb_3|contadorVid:comb_49580|lpm_divide:Mod0" with the following parameter: File: /home/gabs/Downloads/PROJETO/PROJETO/contadorVid.v Line: 41
     Info (12134): Parameter "LPM_WIDTHN" = "17"
     Info (12134): Parameter "LPM_WIDTHD" = "9"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_t3m.tdf
-    Info (12023): Found entity 1: lpm_divide_t3m File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/db/lpm_divide_t3m.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_t3m File: /home/gabs/Downloads/PROJETO/PROJETO/db/lpm_divide_t3m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_0mh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_0mh File: /home/gabs/Downloads/PROJETO/PROJETO/db/sign_div_unsign_0mh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_60f.tdf
+    Info (12023): Found entity 1: alt_u_div_60f File: /home/gabs/Downloads/PROJETO/PROJETO/db/alt_u_div_60f.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "motorBack_Ground:comb_3|contadorVid:comb_49580|lpm_divide:Div0" File: /home/gabs/Downloads/PROJETO/PROJETO/contadorVid.v Line: 40
+Info (12133): Instantiated megafunction "motorBack_Ground:comb_3|contadorVid:comb_49580|lpm_divide:Div0" with the following parameter: File: /home/gabs/Downloads/PROJETO/PROJETO/contadorVid.v Line: 40
+    Info (12134): Parameter "LPM_WIDTHN" = "17"
+    Info (12134): Parameter "LPM_WIDTHD" = "9"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_qbm.tdf
+    Info (12023): Found entity 1: lpm_divide_qbm File: /home/gabs/Downloads/PROJETO/PROJETO/db/lpm_divide_qbm.tdf Line: 25
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "AUD_ADCLRCK" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 70
-    Warning (13040): bidirectional pin "AUD_BCLK" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 71
-    Warning (13040): bidirectional pin "AUD_DACLRCK" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 73
-    Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 106
-    Warning (13040): bidirectional pin "DRAM_DQ[1]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 106
-    Warning (13040): bidirectional pin "DRAM_DQ[2]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 106
-    Warning (13040): bidirectional pin "DRAM_DQ[3]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 106
-    Warning (13040): bidirectional pin "DRAM_DQ[4]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 106
-    Warning (13040): bidirectional pin "DRAM_DQ[5]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 106
-    Warning (13040): bidirectional pin "DRAM_DQ[6]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 106
-    Warning (13040): bidirectional pin "DRAM_DQ[7]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 106
-    Warning (13040): bidirectional pin "DRAM_DQ[8]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 106
-    Warning (13040): bidirectional pin "DRAM_DQ[9]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 106
-    Warning (13040): bidirectional pin "DRAM_DQ[10]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 106
-    Warning (13040): bidirectional pin "DRAM_DQ[11]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 106
-    Warning (13040): bidirectional pin "DRAM_DQ[12]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 106
-    Warning (13040): bidirectional pin "DRAM_DQ[13]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 106
-    Warning (13040): bidirectional pin "DRAM_DQ[14]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 106
-    Warning (13040): bidirectional pin "DRAM_DQ[15]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 106
-    Warning (13040): bidirectional pin "FPGA_I2C_SDAT" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 121
-    Warning (13040): bidirectional pin "GPIO_0[0]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[1]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[2]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[3]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[4]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[5]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[6]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[7]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[8]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[9]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[10]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[11]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[12]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[13]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[14]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[15]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[16]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[17]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[18]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[19]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[20]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[21]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[22]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[23]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[24]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[25]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[26]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[27]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[28]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[29]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[30]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[31]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[32]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[33]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[34]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_0[35]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 126
-    Warning (13040): bidirectional pin "GPIO_1[0]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[1]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[2]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[3]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[4]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[5]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[6]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[7]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[8]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[9]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[10]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[11]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[12]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[13]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[14]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[15]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[16]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[17]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[18]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[19]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[20]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[21]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[22]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[23]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[24]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[25]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[26]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[27]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[28]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[29]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[30]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[31]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[32]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[33]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[34]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "GPIO_1[35]" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 127
-    Warning (13040): bidirectional pin "PS2_CLK" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 215
-    Warning (13040): bidirectional pin "PS2_CLK2" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 216
-    Warning (13040): bidirectional pin "PS2_DAT" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 217
-    Warning (13040): bidirectional pin "PS2_DAT2" has no driver File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 218
+    Warning (13040): bidirectional pin "AUD_ADCLRCK" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 70
+    Warning (13040): bidirectional pin "AUD_BCLK" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 71
+    Warning (13040): bidirectional pin "AUD_DACLRCK" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 73
+    Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[1]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[2]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[3]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[4]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[5]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[6]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[7]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[8]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[9]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[10]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[11]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[12]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[13]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[14]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "DRAM_DQ[15]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 106
+    Warning (13040): bidirectional pin "FPGA_I2C_SDAT" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 121
+    Warning (13040): bidirectional pin "GPIO_0[0]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[1]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[2]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[3]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[4]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[5]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[6]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[7]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[8]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[9]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[10]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[11]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[12]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[13]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[14]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[15]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[16]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[17]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[18]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[19]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[20]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[21]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[22]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[23]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[24]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[25]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[26]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[27]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[28]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[29]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[30]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[31]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[32]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[33]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[34]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_0[35]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 126
+    Warning (13040): bidirectional pin "GPIO_1[0]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[1]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[2]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[3]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[4]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[5]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[6]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[7]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[8]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[9]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[10]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[11]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[12]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[13]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[14]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[15]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[16]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[17]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[18]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[19]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[20]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[21]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[22]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[23]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[24]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[25]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[26]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[27]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[28]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[29]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[30]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[31]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[32]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[33]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[34]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "GPIO_1[35]" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 127
+    Warning (13040): bidirectional pin "PS2_CLK" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 215
+    Warning (13040): bidirectional pin "PS2_CLK2" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 216
+    Warning (13040): bidirectional pin "PS2_DAT" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 217
+    Warning (13040): bidirectional pin "PS2_DAT2" has no driver File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 218
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "ADC_CONVST" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 59
-    Warning (13410): Pin "ADC_DIN" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 60
-    Warning (13410): Pin "ADC_SCLK" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 62
-    Warning (13410): Pin "AUD_DACDAT" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 72
-    Warning (13410): Pin "AUD_XCK" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 74
-    Warning (13410): Pin "DRAM_ADDR[0]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 100
-    Warning (13410): Pin "DRAM_ADDR[1]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 100
-    Warning (13410): Pin "DRAM_ADDR[2]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 100
-    Warning (13410): Pin "DRAM_ADDR[3]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 100
-    Warning (13410): Pin "DRAM_ADDR[4]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 100
-    Warning (13410): Pin "DRAM_ADDR[5]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 100
-    Warning (13410): Pin "DRAM_ADDR[6]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 100
-    Warning (13410): Pin "DRAM_ADDR[7]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 100
-    Warning (13410): Pin "DRAM_ADDR[8]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 100
-    Warning (13410): Pin "DRAM_ADDR[9]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 100
-    Warning (13410): Pin "DRAM_ADDR[10]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 100
-    Warning (13410): Pin "DRAM_ADDR[11]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 100
-    Warning (13410): Pin "DRAM_ADDR[12]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 100
-    Warning (13410): Pin "DRAM_BA[0]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 101
-    Warning (13410): Pin "DRAM_BA[1]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 101
-    Warning (13410): Pin "DRAM_CAS_N" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 102
-    Warning (13410): Pin "DRAM_CKE" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 103
-    Warning (13410): Pin "DRAM_CLK" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 104
-    Warning (13410): Pin "DRAM_CS_N" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 105
-    Warning (13410): Pin "DRAM_LDQM" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 107
-    Warning (13410): Pin "DRAM_RAS_N" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 108
-    Warning (13410): Pin "DRAM_UDQM" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 109
-    Warning (13410): Pin "DRAM_WE_N" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 110
-    Warning (13410): Pin "FAN_CTRL" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 115
-    Warning (13410): Pin "FPGA_I2C_SCLK" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 120
-    Warning (13410): Pin "HEX0[0]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 133
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 133
-    Warning (13410): Pin "HEX0[2]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 133
-    Warning (13410): Pin "HEX0[3]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 133
-    Warning (13410): Pin "HEX0[4]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 133
-    Warning (13410): Pin "HEX0[5]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 133
-    Warning (13410): Pin "HEX0[6]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 133
-    Warning (13410): Pin "HEX1[0]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 134
-    Warning (13410): Pin "HEX1[1]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 134
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 134
-    Warning (13410): Pin "HEX1[3]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 134
-    Warning (13410): Pin "HEX1[4]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 134
-    Warning (13410): Pin "HEX1[5]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 134
-    Warning (13410): Pin "HEX1[6]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 134
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 135
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 135
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 135
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 135
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 135
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 135
-    Warning (13410): Pin "HEX2[6]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 135
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 136
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 136
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 136
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 136
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 136
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 136
-    Warning (13410): Pin "HEX3[6]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 136
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 137
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 137
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 137
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 137
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 137
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 137
-    Warning (13410): Pin "HEX4[6]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 137
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 138
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 138
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 138
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 138
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 138
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 138
-    Warning (13410): Pin "HEX5[6]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 138
-    Warning (13410): Pin "IRDA_TXD" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 200
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 210
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 210
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 210
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 210
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 210
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 210
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 210
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 210
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 210
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 210
-    Warning (13410): Pin "TD_RESET_N" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 231
-    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 237
-    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 237
-    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 237
-    Warning (13410): Pin "VGA_B[3]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 237
-    Warning (13410): Pin "VGA_B[4]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 237
-    Warning (13410): Pin "VGA_B[5]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 237
-    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 240
-    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 240
-    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 240
-    Warning (13410): Pin "VGA_G[3]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 240
-    Warning (13410): Pin "VGA_G[4]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 240
-    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 242
-    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 242
-    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 242
-    Warning (13410): Pin "VGA_R[3]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 242
-    Warning (13410): Pin "VGA_R[4]" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 242
-    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 243
+    Warning (13410): Pin "ADC_CONVST" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 59
+    Warning (13410): Pin "ADC_DIN" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 60
+    Warning (13410): Pin "ADC_SCLK" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 62
+    Warning (13410): Pin "AUD_DACDAT" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 72
+    Warning (13410): Pin "AUD_XCK" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 74
+    Warning (13410): Pin "DRAM_ADDR[0]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_ADDR[1]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_ADDR[2]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_ADDR[3]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_ADDR[4]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_ADDR[5]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_ADDR[6]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_ADDR[7]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_ADDR[8]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_ADDR[9]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_ADDR[10]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_ADDR[11]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_ADDR[12]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 100
+    Warning (13410): Pin "DRAM_BA[0]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 101
+    Warning (13410): Pin "DRAM_BA[1]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 101
+    Warning (13410): Pin "DRAM_CAS_N" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 102
+    Warning (13410): Pin "DRAM_CKE" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 103
+    Warning (13410): Pin "DRAM_CLK" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 104
+    Warning (13410): Pin "DRAM_CS_N" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 105
+    Warning (13410): Pin "DRAM_LDQM" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 107
+    Warning (13410): Pin "DRAM_RAS_N" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 108
+    Warning (13410): Pin "DRAM_UDQM" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 109
+    Warning (13410): Pin "DRAM_WE_N" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 110
+    Warning (13410): Pin "FAN_CTRL" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 115
+    Warning (13410): Pin "FPGA_I2C_SCLK" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 120
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 133
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 133
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 133
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 133
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 133
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 133
+    Warning (13410): Pin "HEX0[6]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 133
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 134
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 134
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 134
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 134
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 134
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 134
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 134
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 135
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 135
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 135
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 135
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 135
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 135
+    Warning (13410): Pin "HEX2[6]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 135
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 136
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 136
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 136
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 136
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 136
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 136
+    Warning (13410): Pin "HEX3[6]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 136
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 137
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 137
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 137
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 137
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 137
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 137
+    Warning (13410): Pin "HEX4[6]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 137
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 138
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 138
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 138
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 138
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 138
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 138
+    Warning (13410): Pin "HEX5[6]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 138
+    Warning (13410): Pin "IRDA_TXD" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 200
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 210
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 210
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 210
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 210
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 210
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 210
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 210
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 210
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 210
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 210
+    Warning (13410): Pin "TD_RESET_N" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 231
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 237
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 237
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 237
+    Warning (13410): Pin "VGA_B[3]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 237
+    Warning (13410): Pin "VGA_B[4]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 237
+    Warning (13410): Pin "VGA_B[5]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 237
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 240
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 240
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 240
+    Warning (13410): Pin "VGA_G[3]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 240
+    Warning (13410): Pin "VGA_G[4]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 240
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 242
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 242
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 242
+    Warning (13410): Pin "VGA_R[3]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 242
+    Warning (13410): Pin "VGA_R[4]" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 242
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 243
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 16 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning: RST port on the PLL is not properly connected on instance CLOCK_100MGH:comb_4|CLOCK_100MGH_0002:clock_100mgh_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: /opt/intelFPGA_lite/25.1/quartus/libraries/megafunctions/altera_pll.v Line: 749
+Warning: RST port on the PLL is not properly connected on instance CLOCK_100MGH:comb_4|CLOCK_100MGH_0002:clock_100mgh_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: /home/gabs/altera_lite/25.1std/quartus/libraries/megafunctions/altera_pll.v Line: 749
     Info: Must be connected
 Warning (21074): Design contains 22 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "ADC_DOUT" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 61
-    Warning (15610): No output dependent on input pin "AUD_ADCDAT" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 69
-    Warning (15610): No output dependent on input pin "CLOCK2_50" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 80
-    Warning (15610): No output dependent on input pin "CLOCK3_50" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 85
-    Warning (15610): No output dependent on input pin "CLOCK4_50" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 90
-    Warning (15610): No output dependent on input pin "IRDA_RXD" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 199
-    Warning (15610): No output dependent on input pin "KEY[0]" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 205
-    Warning (15610): No output dependent on input pin "KEY[1]" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 205
-    Warning (15610): No output dependent on input pin "KEY[2]" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 205
-    Warning (15610): No output dependent on input pin "KEY[3]" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 205
-    Warning (15610): No output dependent on input pin "SW[7]" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 223
-    Warning (15610): No output dependent on input pin "TD_CLK27" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 228
-    Warning (15610): No output dependent on input pin "TD_DATA[0]" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 229
-    Warning (15610): No output dependent on input pin "TD_DATA[1]" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 229
-    Warning (15610): No output dependent on input pin "TD_DATA[2]" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 229
-    Warning (15610): No output dependent on input pin "TD_DATA[3]" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 229
-    Warning (15610): No output dependent on input pin "TD_DATA[4]" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 229
-    Warning (15610): No output dependent on input pin "TD_DATA[5]" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 229
-    Warning (15610): No output dependent on input pin "TD_DATA[6]" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 229
-    Warning (15610): No output dependent on input pin "TD_DATA[7]" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 229
-    Warning (15610): No output dependent on input pin "TD_HS" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 230
-    Warning (15610): No output dependent on input pin "TD_VS" File: /home/aluno/Downloads/PROJETO_NOVO_at-20260831T184838Z-1-001/PROJETO_NOVO_at/DE1_SOC_golden_top.v Line: 232
-Info (21057): Implemented 936 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "ADC_DOUT" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 61
+    Warning (15610): No output dependent on input pin "AUD_ADCDAT" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 69
+    Warning (15610): No output dependent on input pin "CLOCK2_50" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 80
+    Warning (15610): No output dependent on input pin "CLOCK3_50" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 85
+    Warning (15610): No output dependent on input pin "CLOCK4_50" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 90
+    Warning (15610): No output dependent on input pin "IRDA_RXD" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 199
+    Warning (15610): No output dependent on input pin "KEY[0]" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 205
+    Warning (15610): No output dependent on input pin "KEY[1]" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 205
+    Warning (15610): No output dependent on input pin "KEY[2]" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 205
+    Warning (15610): No output dependent on input pin "KEY[3]" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 205
+    Warning (15610): No output dependent on input pin "SW[7]" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 223
+    Warning (15610): No output dependent on input pin "TD_CLK27" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 228
+    Warning (15610): No output dependent on input pin "TD_DATA[0]" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 229
+    Warning (15610): No output dependent on input pin "TD_DATA[1]" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 229
+    Warning (15610): No output dependent on input pin "TD_DATA[2]" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 229
+    Warning (15610): No output dependent on input pin "TD_DATA[3]" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 229
+    Warning (15610): No output dependent on input pin "TD_DATA[4]" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 229
+    Warning (15610): No output dependent on input pin "TD_DATA[5]" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 229
+    Warning (15610): No output dependent on input pin "TD_DATA[6]" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 229
+    Warning (15610): No output dependent on input pin "TD_DATA[7]" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 229
+    Warning (15610): No output dependent on input pin "TD_HS" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 230
+    Warning (15610): No output dependent on input pin "TD_VS" File: /home/gabs/Downloads/PROJETO/PROJETO/DE1_SOC_golden_top.v Line: 232
+Info (21057): Implemented 1070 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 32 input pins
     Info (21059): Implemented 113 output pins
     Info (21060): Implemented 96 bidirectional pins
-    Info (21061): Implemented 614 logic cells
-    Info (21064): Implemented 80 RAM segments
+    Info (21061): Implemented 668 logic cells
+    Info (21064): Implemented 160 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 272 warnings
-    Info: Peak virtual memory: 592 megabytes
-    Info: Processing ended: Mon Aug 31 17:11:41 2026
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:15
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 279 warnings
+    Info: Peak virtual memory: 562 megabytes
+    Info: Processing ended: Mon Aug 31 21:12:14 2026
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:16
 
 

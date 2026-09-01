@@ -16,11 +16,18 @@ module resolucao_logica(   input wire clock,     // 25 MHz
 );
 reg clock_25;
 wire [9:0] next_x, next_y;
-wire [7:0] color_in;
+wire [7:0] color_in1, color_in2;
 reg [1:0] count;
 
 reg [16:0] readVGA;
 //
+reg VGA;
+
+wire [7:0] color_in = (VGA ? color_in1 :color_in2);
+
+wire wren1 = (VGA ? 1'b0 :wren);
+
+wire wren2 = (VGA ? wren:1'b0 );
 
 assign next_x_log = next_x/2;
 assign next_y_log = next_y/2;
@@ -31,21 +38,47 @@ always @(posedge clock or posedge reset) begin
         if (reset) begin
             count   <= 2'b00;
             clock_25 <= 1'b0;
+				
         end else begin
+				
             count   <= count + 1'b1;
             clock_25 <= count[1]; // O bit 1 alterna a cada 2 pulsos do clk_in
         end
     end
 always @(*) begin
 	readVGA = (next_y_log*320) + next_x_log;
+	
+	
+end
+
+always @(posedge vsync) begin
+	
+		if(VGA)begin
+			VGA <= 1'b0;
+		end else begin
+			VGA <= 1'b1;
+		end
 end
 RAMVIDEO(
 	clock,
 	data,
 	readVGA,
 	wraddress,
-	wren,
-	color_in);
+	wren1,
+	color_in1
+);
+	
+RAMVIDEO(
+	clock,
+	data,
+	readVGA,
+	wraddress,
+	wren2,
+	color_in2
+);
+
+
+
 
 	 
  vga_driver (
