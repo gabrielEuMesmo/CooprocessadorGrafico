@@ -17,20 +17,20 @@ IUKdZoGVFDom;3Qgd8gNW`1
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
 Z4 w1787858506
-8CoprocessadorGrafico.vo
-FCoprocessadorGrafico.vo
+Z5 8CoprocessadorGrafico.vo
+Z6 FCoprocessadorGrafico.vo
 !i122 0
 L0 32 12080
-Z5 OV;L;2020.1;71
+Z7 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1787858507.000000
-!s107 CoprocessadorGrafico.vo|
-!s90 -work|work|CoprocessadorGrafico.vo|
+Z8 !s108 1787858507.000000
+Z9 !s107 CoprocessadorGrafico.vo|
+Z10 !s90 -work|work|CoprocessadorGrafico.vo|
 !i113 1
-Z7 o-work work
-Z8 tCvgOpt 0
+Z11 o-work work
+Z12 tCvgOpt 0
 ncontador@vid
 vcontadorVid_vlg_vec_tst
 R1
@@ -45,14 +45,62 @@ R4
 FWaveform.vwf.vt
 !i122 1
 L0 30 47
-R5
+R7
 r1
 !s85 0
 31
-R6
+R8
 !s107 Waveform.vwf.vt|
 !s90 -work|work|Waveform.vwf.vt|
 !i113 1
-R7
-R8
+R11
+R12
 ncontador@vid_vlg_vec_tst
+vMEF_geral_layer
+Z13 !s110 1788267013
+!i10b 1
+!s100 ZCUM8NVkNPUOdbM[X:d2@3
+R2
+IPk[:Lz:7MFiGT[[;7:^Q62
+R3
+Z14 d/home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/simulation/qsim
+Z15 w1788267012
+R5
+R6
+!i122 2
+L0 32 474
+R7
+r1
+!s85 0
+31
+Z16 !s108 1788267013.000000
+R9
+R10
+!i113 1
+R11
+R12
+n@m@e@f_geral_layer
+vMEF_geral_layer_vlg_vec_tst
+R13
+!i10b 1
+!s100 6]JKE4UF68bCiDP1;G[b50
+R2
+IH3;ehAEG5HgONc1LgoeS;0
+R3
+R14
+R15
+8Waveform2.vwf.vt
+FWaveform2.vwf.vt
+!i122 3
+L0 30 80
+R7
+r1
+!s85 0
+31
+R16
+!s107 Waveform2.vwf.vt|
+!s90 -work|work|Waveform2.vwf.vt|
+!i113 1
+R11
+R12
+n@m@e@f_geral_layer_vlg_vec_tst

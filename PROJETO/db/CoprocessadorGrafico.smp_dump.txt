@@ -1,14 +1,29 @@
 
-State Machine - |DE1_SOC_golden_top|resolucao_logica:comb_5|vga_driver:comb_55|v_state
+State Machine - |DE1_SOC_golden_top|top_sistema:comb_4|motorVideoTop:u_video|motorSprites_Blitter:u_sprt|state
+Name state.ST_WAIT_ROM state.ST_SETUP_ROM state.ST_READ_OAM state.ST_IDLE state.ST_WRITE_BUF 
+state.ST_IDLE 0 0 0 0 0 
+state.ST_READ_OAM 0 0 1 1 0 
+state.ST_SETUP_ROM 0 1 0 1 0 
+state.ST_WAIT_ROM 1 0 0 1 0 
+state.ST_WRITE_BUF 0 0 0 1 1 
+
+State Machine - |DE1_SOC_golden_top|top_sistema:comb_4|resolucao_logica:u_resolucao|vga_driver:comb_53|v_state
 Name v_state.V_BACK_STATE v_state.V_PULSE_STATE v_state.V_FRONT_STATE v_state.V_ACTIVE_STATE 
 v_state.V_ACTIVE_STATE 0 0 0 0 
 v_state.V_FRONT_STATE 0 0 1 1 
 v_state.V_PULSE_STATE 0 1 0 1 
 v_state.V_BACK_STATE 1 0 0 1 
 
-State Machine - |DE1_SOC_golden_top|resolucao_logica:comb_5|vga_driver:comb_55|h_state
+State Machine - |DE1_SOC_golden_top|top_sistema:comb_4|resolucao_logica:u_resolucao|vga_driver:comb_53|h_state
 Name h_state.H_BACK_STATE h_state.H_PULSE_STATE h_state.H_FRONT_STATE h_state.H_ACTIVE_STATE 
 h_state.H_ACTIVE_STATE 0 0 0 0 
 h_state.H_FRONT_STATE 0 0 1 1 
 h_state.H_PULSE_STATE 0 1 0 1 
 h_state.H_BACK_STATE 1 0 0 1 
+
+State Machine - |DE1_SOC_golden_top|top_sistema:comb_4|motorVideoTop:u_video|MEF_geral_layer:u_mef|estado_atual
+Name estado_atual.BG estado_atual.POL estado_atual.SPRT estado_atual.IDLE 
+estado_atual.IDLE 0 0 0 0 
+estado_atual.SPRT 0 0 1 1 
+estado_atual.POL 0 1 0 1 
+estado_atual.BG 1 0 0 1 

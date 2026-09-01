@@ -270,7 +270,7 @@ top_sistema (
     .SW(SW[9:0]),
     .layer_order(), // sem origem definida nos módulos atuais — ligar em switch ou fixar
 
-    .clock(outclk_0),     // 25 MHz
+    .clock(outclk_0),
     .reset(1'b1),
     .hsync(VGA_HS),    // HSYNC (to VGA connector)
     .vsync_out(VGA_VS),    // VSYNC (to VGA connctor)

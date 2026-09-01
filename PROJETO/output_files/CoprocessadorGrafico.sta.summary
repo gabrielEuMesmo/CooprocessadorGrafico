@@ -2,212 +2,84 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -10.270
-TNS   : -29706.192
-
-Type  : Slow 1100mV 85C Model Setup 'resolucao_logica:comb_5|clock_25'
-Slack : -9.374
-TNS   : -209.966
-
-Type  : Slow 1100mV 85C Model Setup 'resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg'
-Slack : -1.659
-TNS   : -3.313
-
-Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : 16.320
+Type  : Slow 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 12.559
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'resolucao_logica:comb_5|clock_25'
-Slack : 0.321
+Type  : Slow 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.416
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.376
+Type  : Slow 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 30.161
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.410
+Type  : Slow 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.652
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg'
-Slack : 1.471
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.063
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'resolucao_logica:comb_5|clock_25'
-Slack : -0.394
-TNS   : -29.643
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg'
-Slack : -0.394
-TNS   : -1.087
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
-Slack : 1.666
+Type  : Slow 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 12.601
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 3.758
+Type  : Slow 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.411
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 9.242
+Type  : Slow 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 30.228
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Setup 'comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -10.154
-TNS   : -28442.937
-
-Type  : Slow 1100mV 0C Model Setup 'resolucao_logica:comb_5|clock_25'
-Slack : -9.445
-TNS   : -210.322
-
-Type  : Slow 1100mV 0C Model Setup 'resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg'
-Slack : -1.579
-TNS   : -3.154
-
-Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : 16.241
+Type  : Slow 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.626
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -0.046
-TNS   : -0.046
-
-Type  : Slow 1100mV 0C Model Hold 'resolucao_logica:comb_5|clock_25'
-Slack : 0.303
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.047
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.385
+Type  : Fast 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 14.530
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg'
-Slack : 1.412
+Type  : Fast 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.193
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'resolucao_logica:comb_5|clock_25'
-Slack : -0.394
-TNS   : -28.854
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg'
-Slack : -0.394
-TNS   : -1.070
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
-Slack : 1.666
+Type  : Fast 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 31.199
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 3.735
+Type  : Fast 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.272
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 9.298
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 14.785
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Setup 'comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -7.386
-TNS   : -14793.348
-
-Type  : Fast 1100mV 85C Model Setup 'resolucao_logica:comb_5|clock_25'
-Slack : -5.248
-TNS   : -101.005
-
-Type  : Fast 1100mV 85C Model Setup 'resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg'
-Slack : -0.767
-TNS   : -1.533
-
-Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : 17.814
+Type  : Fast 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 14.830
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'resolucao_logica:comb_5|clock_25'
-Slack : 0.120
+Type  : Fast 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.176
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.182
+Type  : Fast 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 31.377
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.214
+Type  : Fast 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.245
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg'
-Slack : 0.846
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'resolucao_logica:comb_5|clock_25'
-Slack : 0.045
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg'
-Slack : 0.084
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
-Slack : 1.666
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 3.879
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 9.108
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Setup 'comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -5.944
-TNS   : -11024.136
-
-Type  : Fast 1100mV 0C Model Setup 'resolucao_logica:comb_5|clock_25'
-Slack : -4.890
-TNS   : -92.378
-
-Type  : Fast 1100mV 0C Model Setup 'resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg'
-Slack : -0.642
-TNS   : -1.284
-
-Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : 17.952
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'resolucao_logica:comb_5|clock_25'
-Slack : 0.098
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.172
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.205
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg'
-Slack : 0.758
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'resolucao_logica:comb_5|clock_25'
-Slack : 0.076
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'resolucao_logica:comb_5|vga_driver:comb_55|vsync_reg'
-Slack : 0.097
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
-Slack : 1.666
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'comb_4|clock_100mgh_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 3.882
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 9.068
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 14.761
 TNS   : 0.000
 
 ------------------------------------------------------------

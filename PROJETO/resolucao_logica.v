@@ -23,7 +23,7 @@ reg [16:0] readVGA;
 //
 reg VGA;
 
-wire [7:0] color_in = (VGA ? color_in1 :color_in2);
+wire [7:0] color_in ;
 
 wire wren1 = (VGA ? 1'b0 :wren);
 
@@ -71,8 +71,8 @@ RAMVIDEO(
 	data,
 	readVGA,
 	wraddress,
-	wren1,
-	color_in1
+	wren,
+	color_in
 );
 	
 RAMVIDEO(

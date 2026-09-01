@@ -43,7 +43,6 @@ module motorPol (
         for (e = 0; e < 4; e = e + 1) begin : GEN_POLIGONOS
             poligono_gerador inst_pol (
                 .trapezio (pol[e][76]),
-                .visivel  (pol[e][77]),
                 .x        (next_x),
                 .y        (next_y),
                 .x0       (pol[e][16:8]),  .y0(pol[e][7:0]),
@@ -51,7 +50,7 @@ module motorPol (
                 .x2       (pol[e][50:42]), .y2(pol[e][41:34]),
                 .x3       (pol[e][67:59]), .y3(pol[e][58:51]),
                 .color    (pol[e][75:68]),
-                .pixel    (pixel[e])
+                .pixel    (pixel[e]),
             );
         end
     endgenerate

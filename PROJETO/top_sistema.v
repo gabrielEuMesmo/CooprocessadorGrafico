@@ -77,7 +77,7 @@ module top_sistema (
     // ================= Motor de vídeo (rasterização das 3 camadas) =================
     motorVideoTop u_video (
         .clk            (clock),
-        .reset          (reset_n),
+        .reset          (reset),
         .vsync          (w_vsync),
         .layer_order    (layer_order),
 

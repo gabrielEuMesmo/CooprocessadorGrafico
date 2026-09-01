@@ -26,6 +26,11 @@ module MEF_geral_layer(
 		end
 		
 		always @(*)begin
+			enableBg   = 1'b0;
+			enableSprt = 1'b0;
+			enablePol  = 1'b0;
+			prox_estado = estado_atual;
+			
 			if(estado_atual == IDLE )begin
 				if(vsyncPulse)begin
 					prox_estado = BG;

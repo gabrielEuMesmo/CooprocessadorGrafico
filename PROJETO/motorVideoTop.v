@@ -55,16 +55,10 @@ module motorVideoTop (
     wire [16:0] bg_address;
 	 wire bgPulseEnable;
 	 
-	 rising_edge_detector  (
-        clk,
-        reset,
-        enableBG,
-        bgPulseEnable
-    );
 
     motorBack_Ground u_bg (
         .reset   (reset),
-        .enable  (bgPulseEnable),
+        .enable  (enableBg),
         .clk     (clk),
         .Roll    (bg_Roll),
         .WRoll   (bg_WRoll),
@@ -82,15 +76,9 @@ module motorVideoTop (
     wire [16:0] pol_address;
 	 wire polPulseEnable;
 	 
-	 rising_edge_detector (
-        clk,
-        reset,
-        enablePol,
-        polPulseEnable
-    );
 
     motorPol u_pol (
-        .enable    (polPulseEnable),
+        .enable    (enablePol),
         .clk       (clk),
         .polAddress(pol_polAddress),
         .cordenada (pol_cordenada),
@@ -141,6 +129,7 @@ module motorVideoTop (
         if (enableBg) begin
             address = bg_address;
             pixel   = bg_pixel;
+				wren = 1'b1;
         end else if (enablePol) begin
 				if(pol_pixel > 0)begin
 					address = pol_address;

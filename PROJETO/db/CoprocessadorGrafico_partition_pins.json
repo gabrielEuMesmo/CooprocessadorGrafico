@@ -4,6 +4,22 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "LEDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[3]",
+					"strict" : false
+				},
+				{
 					"name" : "VGA_B[6]",
 					"strict" : false
 				},
@@ -52,11 +68,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "CLOCK_50",
+					"name" : "KEY[0]",
 					"strict" : false
 				},
 				{
-					"name" : "SW[0]",
+					"name" : "KEY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[2]",
 					"strict" : false
 				},
 				{
@@ -64,11 +84,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[6]",
+					"name" : "SW[3]",
 					"strict" : false
 				},
 				{
-					"name" : "SW[8]",
+					"name" : "SW[0]",
 					"strict" : false
 				},
 				{
@@ -80,15 +100,27 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[3]",
-					"strict" : false
-				},
-				{
 					"name" : "SW[4]",
 					"strict" : false
 				},
 				{
 					"name" : "SW[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[8]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[3]",
 					"strict" : false
 				}
 			]

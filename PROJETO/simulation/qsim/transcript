@@ -1,35 +1,612 @@
 # do CoprocessadorGrafico.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 08:52:08 on Aug 28,2026
+# Start time: 09:50:13 on Sep 01,2026
 # vlog -work work CoprocessadorGrafico.vo 
 # -- Compiling module MEF_geral_layer
 # 
 # Top level modules:
 # 	MEF_geral_layer
-# End time: 08:52:08 on Aug 28,2026, Elapsed time: 0:00:00
+# End time: 09:50:13 on Sep 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 08:52:08 on Aug 28,2026
-# vlog -work work Waveform1.vwf.vt 
+# Start time: 09:50:13 on Sep 01,2026
+# vlog -work work Waveform2.vwf.vt 
 # -- Compiling module MEF_geral_layer_vlg_vec_tst
 # 
 # Top level modules:
 # 	MEF_geral_layer_vlg_vec_tst
-# End time: 08:52:08 on Aug 28,2026, Elapsed time: 0:00:00
+# End time: 09:50:13 on Sep 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.MEF_geral_layer_vlg_vec_tst 
-# Start time: 08:52:08 on Aug 28,2026
+# Start time: 09:50:13 on Sep 01,2026
 # Loading work.MEF_geral_layer_vlg_vec_tst
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
 # Loading work.MEF_geral_layer
-# Loading cyclonev_ver.cyclonev_io_obuf
-# Loading cyclonev_ver.cyclonev_io_ibuf
-# Loading cyclonev_ver.cyclonev_clkena
-# Loading cyclonev_ver.cyclonev_lcell_comb
-# Loading altera_ver.dffeas
-# Loading altera_ver.PRIM_GDFF_LOW
-# after#25
-# ** Note: $finish    : Waveform1.vwf.vt(59)
-#    Time: 1 us  Iteration: 0  Instance: /MEF_geral_layer_vlg_vec_tst
-# End time: 08:52:08 on Aug 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) Instantiation of 'cyclonev_io_obuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MEF_geral_layer_vlg_vec_tst/i1 File: CoprocessadorGrafico.vo Line: 101
+#         Searched libraries:
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+#             /opt/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+#             /home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/simulation/qsim/rtl_work
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) Instantiation of 'cyclonev_io_obuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MEF_geral_layer_vlg_vec_tst/i1 File: CoprocessadorGrafico.vo Line: 117
+#         Searched libraries:
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+#             /opt/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+#             /home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/simulation/qsim/rtl_work
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) Instantiation of 'cyclonev_io_obuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MEF_geral_layer_vlg_vec_tst/i1 File: CoprocessadorGrafico.vo Line: 133
+#         Searched libraries:
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+#             /opt/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+#             /home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/simulation/qsim/rtl_work
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) Instantiation of 'cyclonev_io_ibuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MEF_geral_layer_vlg_vec_tst/i1 File: CoprocessadorGrafico.vo Line: 149
+#         Searched libraries:
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+#             /opt/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+#             /home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/simulation/qsim/rtl_work
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) Instantiation of 'cyclonev_clkena' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MEF_geral_layer_vlg_vec_tst/i1 File: CoprocessadorGrafico.vo Line: 160
+#         Searched libraries:
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+#             /opt/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+#             /home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/simulation/qsim/rtl_work
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) Instantiation of 'cyclonev_io_ibuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MEF_geral_layer_vlg_vec_tst/i1 File: CoprocessadorGrafico.vo Line: 174
+#         Searched libraries:
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+#             /opt/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+#             /home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/simulation/qsim/rtl_work
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) Instantiation of 'cyclonev_io_ibuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MEF_geral_layer_vlg_vec_tst/i1 File: CoprocessadorGrafico.vo Line: 185
+#         Searched libraries:
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+#             /opt/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+#             /home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/simulation/qsim/rtl_work
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) Instantiation of 'cyclonev_lcell_comb' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MEF_geral_layer_vlg_vec_tst/i1 File: CoprocessadorGrafico.vo Line: 196
+#         Searched libraries:
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+#             /opt/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+#             /home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/simulation/qsim/rtl_work
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) Instantiation of 'cyclonev_io_ibuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MEF_geral_layer_vlg_vec_tst/i1 File: CoprocessadorGrafico.vo Line: 220
+#         Searched libraries:
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+#             /opt/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+#             /home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/simulation/qsim/rtl_work
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) Instantiation of 'dffeas' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MEF_geral_layer_vlg_vec_tst/i1 File: CoprocessadorGrafico.vo Line: 231
+#         Searched libraries:
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+#             /opt/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+#             /home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/simulation/qsim/rtl_work
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) Instantiation of 'cyclonev_io_ibuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MEF_geral_layer_vlg_vec_tst/i1 File: CoprocessadorGrafico.vo Line: 250
+#         Searched libraries:
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+#             /opt/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+#             /home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/simulation/qsim/rtl_work
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) Instantiation of 'cyclonev_io_ibuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MEF_geral_layer_vlg_vec_tst/i1 File: CoprocessadorGrafico.vo Line: 261
+#         Searched libraries:
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+#             /opt/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+#             /home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/simulation/qsim/rtl_work
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) Instantiation of 'cyclonev_io_ibuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MEF_geral_layer_vlg_vec_tst/i1 File: CoprocessadorGrafico.vo Line: 272
+#         Searched libraries:
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+#             /opt/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+#             /home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/simulation/qsim/rtl_work
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) Instantiation of 'cyclonev_lcell_comb' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MEF_geral_layer_vlg_vec_tst/i1 File: CoprocessadorGrafico.vo Line: 283
+#         Searched libraries:
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+#             /opt/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+#             /home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/simulation/qsim/rtl_work
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) Instantiation of 'dffeas' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MEF_geral_layer_vlg_vec_tst/i1 File: CoprocessadorGrafico.vo Line: 308
+#         Searched libraries:
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+#             /opt/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+#             /home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/simulation/qsim/rtl_work
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) Instantiation of 'cyclonev_lcell_comb' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MEF_geral_layer_vlg_vec_tst/i1 File: CoprocessadorGrafico.vo Line: 327
+#         Searched libraries:
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+#             /opt/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+#             /home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/simulation/qsim/rtl_work
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) Instantiation of 'cyclonev_lcell_comb' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MEF_geral_layer_vlg_vec_tst/i1 File: CoprocessadorGrafico.vo Line: 351
+#         Searched libraries:
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+#             /opt/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+#             /home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/simulation/qsim/rtl_work
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) Instantiation of 'dffeas' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MEF_geral_layer_vlg_vec_tst/i1 File: CoprocessadorGrafico.vo Line: 376
+#         Searched libraries:
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+#             /opt/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+#             /home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/simulation/qsim/rtl_work
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) Instantiation of 'cyclonev_lcell_comb' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MEF_geral_layer_vlg_vec_tst/i1 File: CoprocessadorGrafico.vo Line: 395
+#         Searched libraries:
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+#             /opt/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+#             /home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/simulation/qsim/rtl_work
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) Instantiation of 'dffeas' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MEF_geral_layer_vlg_vec_tst/i1 File: CoprocessadorGrafico.vo Line: 420
+#         Searched libraries:
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+#             /opt/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+#             /home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/simulation/qsim/rtl_work
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) Instantiation of 'cyclonev_lcell_comb' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MEF_geral_layer_vlg_vec_tst/i1 File: CoprocessadorGrafico.vo Line: 439
+#         Searched libraries:
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+#             /opt/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+#             /home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/simulation/qsim/rtl_work
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) Instantiation of 'dffeas' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MEF_geral_layer_vlg_vec_tst/i1 File: CoprocessadorGrafico.vo Line: 464
+#         Searched libraries:
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+#             /opt/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+#             /home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/simulation/qsim/rtl_work
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) Instantiation of 'cyclonev_lcell_comb' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MEF_geral_layer_vlg_vec_tst/i1 File: CoprocessadorGrafico.vo Line: 483
+#         Searched libraries:
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/cyclonev_ver' at "./verilog_libs/cyclonev_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_ver' at "./verilog_libs/altera_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_mf_ver' at "./verilog_libs/altera_mf_ver".
+# No such file or directory. (errno = ENOENT)
+#             /opt/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/sgate_ver' at "./verilog_libs/sgate_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library './verilog_libs/altera_lnsim_ver' at "./verilog_libs/altera_lnsim_ver".
+# No such file or directory. (errno = ENOENT)
+#             /home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/simulation/qsim/rtl_work
+# Error loading design
+# End time: 09:50:13 on Sep 01,2026, Elapsed time: 0:00:00
+# Errors: 258, Warnings: 0
