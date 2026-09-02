@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("/home/aluno/Downloads/CooprocessadorGrafico-atual/PROJETO/output_files/") File("CoprocessadorGrafico.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("/home/aluno/Downloads/PROJETO-20260902T121246Z-1-001/PROJETO/output_files/") File("CoprocessadorGrafico.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

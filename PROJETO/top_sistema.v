@@ -1,17 +1,17 @@
 module top_sistema (
-    input  wire        clock,      // clock único do sistema (mesmo domínio do resolucao_logica)
-    input  wire        reset,      // Ativo ALTO (segue a convenção do resolucao_logica)
+    input  wire        clock,      
+    input  wire        reset,     
     input  wire [3:0]  KEY,
     input  wire [9:0]  SW,
-    input  wire        layer_order, // sem origem definida nos módulos atuais — ligar em switch ou fixar
+    input  wire        layer_order, 
 
     output wire        hsync,
-    output wire        vsync_out,   // vsync físico, também realimenta a MEF
+    output wire        vsync_out,   
     output wire [7:0]  red,
     output wire [7:0]  green,
     output wire [7:0]  blue,
     output wire        sync,
-    output wire        vga_clk,     // renomeado p/ não colidir com "clk" interno
+    output wire        vga_clk,     
     output wire        blank,
 
     output wire [1:0]  LED_Modo,
@@ -20,7 +20,7 @@ module top_sistema (
 	 output LEDIDLE		
 );
 
-    // ---- Fios de interconexão: Controlador -> Motor de vídeo ----
+  
     wire [1:0]  w_bg_Roll;
     wire        w_bg_WRoll;
     wire [5:0]  w_bg_x_tile;
@@ -28,7 +28,7 @@ module top_sistema (
     wire        w_bg_write;
     wire [7:0]  w_bg_color;
 
-    wire [1:0]  w_pol_Address;   // controlador_MEF chama "pol_Address"; motorVideoTop chama "pol_polAddress"
+    wire [1:0]  w_pol_Address;  
     wire [1:0]  w_pol_cordenada;
     wire [8:0]  w_pol_x;
     wire [7:0]  w_pol_y;
@@ -41,16 +41,16 @@ module top_sistema (
     wire [31:0] w_spr_write_data;
     wire        w_spr_write_en;
 
-    // ---- Fios: Motor de vídeo <-> Resolução/VGA ----
+   
     wire [16:0] w_address;
     wire [7:0]  w_pixel;
     wire        w_wren;
     wire        w_vsync;
-    wire        w_camada_ativa; // disponível caso queira usar em outro lugar
+    wire        w_camada_ativa;
 
-    wire        reset_n = ~reset; // adapta polaridade p/ os motores (ativo baixo)
+    wire        reset_n = ~reset; 
 
-    // ================= Controlador (teclas/chaves -> comandos) =================
+  
     controlador_MEF u_controlador (
         .clk           (clock),
         .KEY           (KEY),
@@ -76,7 +76,7 @@ module top_sistema (
         .LED_SubEstado (LED_SubEstado)
     );
 
-    // ================= Motor de vídeo (rasterização das 3 camadas) =================
+
     motorVideoTop u_video (
         .clk            (clock),
         .reset          (reset),
@@ -110,17 +110,15 @@ module top_sistema (
 		  .LEDIDLE			(LEDIDLE)
     );
 
-    // ================= Resolução / saída VGA =================
+
     resolucao_logica u_resolucao (
         .clock     (clock),
-        .reset     (reset),        // ativo alto, como o próprio módulo espera
+        .reset     (reset),       
         .data      (w_pixel),
         .wren      (w_wren),
         .wraddress (w_address),
-        // next_x_log / next_y_log não conectados aqui — disponíveis
-        // se precisar deles em algum outro lugar (ex.: overlay de debug)
         .hsync     (hsync),
-        .vsync     (w_vsync),      // realimenta a MEF e também sai pro conector
+        .vsync     (w_vsync),     
         .red       (red),
         .green     (green),
         .blue      (blue),

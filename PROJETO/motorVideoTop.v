@@ -1,6 +1,6 @@
 module motorVideoTop (
     input  wire        clk,
-    input  wire        reset,       // Ativo baixo (mesma polaridade dos submódulos)
+    input  wire        reset,      
     input  wire        vsync,
     input  wire        layer_order,
 

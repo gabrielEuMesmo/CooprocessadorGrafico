@@ -1,7 +1,7 @@
 module motorPol (
     input  wire        enable,
     input  wire        clk,
-    input  wire [1:0]  polAddress, // 4 endereços de polígonos (0 a 3)
+    input  wire [1:0]  polAddress,
     input  wire [1:0]  cordenada,
     input  wire [8:0]  x,
     input  wire [7:0]  y,
@@ -23,7 +23,7 @@ module motorPol (
     integer u;
     genvar e;
 
-    // Escrita Síncrona no Banco de Registradores
+
     always @(posedge clk or negedge reset) begin 
         if (!reset) begin
             pol[0] <= 78'd0; pol[1] <= 78'd0; 
@@ -38,7 +38,6 @@ module motorPol (
         end
     end
 
-    // Instanciação Combinacional (4 Instâncias sem clock)
     generate
         for (e = 0; e < 4; e = e + 1) begin : GEN_POLIGONOS
             poligono_gerador inst_pol (
@@ -55,11 +54,11 @@ module motorPol (
         end
     endgenerate
 
-    // Prioridade Z-Index
+
     always @(*) begin
         pixelS = 8'h00;
         for (u = 0; u < 4; u = u + 1) begin
-            if (pixel[u] != 8'h00) begin
+            if (pixel[u] != 8'h00 && pol[u][77]) begin
                 pixelS = pixel[u];
             end
         end

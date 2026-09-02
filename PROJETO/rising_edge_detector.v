@@ -4,7 +4,7 @@ module rising_edge_detector (
     input  wire level_i,
     output wire pulse_o
 );
-    reg level_d; // Stores the delayed version of the level input
+    reg level_d; 
 
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
@@ -14,7 +14,7 @@ module rising_edge_detector (
         end
     end
 
-    // High only when current input is 1 and previous input was 0
+  
     assign pulse_o = level_i & (~level_d);
 
 endmodule

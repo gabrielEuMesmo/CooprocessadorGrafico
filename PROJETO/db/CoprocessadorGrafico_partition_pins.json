@@ -20,6 +20,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "VGA_CLK",
+					"strict" : false
+				},
+				{
 					"name" : "LEDR[4]",
 					"strict" : false
 				},
@@ -33,10 +37,6 @@
 				},
 				{
 					"name" : "VGA_BLANK_N",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_CLK",
 					"strict" : false
 				},
 				{
@@ -92,15 +92,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[0]",
+					"name" : "SW[6]",
 					"strict" : false
 				},
 				{
-					"name" : "SW[1]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[2]",
+					"name" : "SW[8]",
 					"strict" : false
 				},
 				{
@@ -112,15 +108,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "SW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[0]",
+					"strict" : false
+				},
+				{
 					"name" : "SW[7]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[6]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[8]",
 					"strict" : false
 				},
 				{

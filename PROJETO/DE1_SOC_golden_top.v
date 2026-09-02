@@ -271,7 +271,7 @@ top_sistema (
     .layer_order(), // sem origem definida nos módulos atuais — ligar em switch ou fixar
 
     .clock(outclk_0),
-    .reset(1'b1),
+    .reset(KEY[0]),
     .hsync(VGA_HS),    // HSYNC (to VGA connector)
     .vsync_out(VGA_VS),    // VSYNC (to VGA connctor)
     .red(VGA_R),     // RED (to resistor DAC VGA connector)

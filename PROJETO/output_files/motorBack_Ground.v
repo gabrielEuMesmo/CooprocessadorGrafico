@@ -31,6 +31,8 @@ module motorBack_Ground(
    wire [4:0] tile_y = next_y[7:3];// next_y / 8
 	wire [5:0] calc_x = (tile_x + offset_x >39)? (tile_x + offset_x) - 40 : (tile_x + offset_x);
 	wire [5:0] calc_y = (tile_y + offset_y >29)? (tile_y + offset_y) - 30 : (tile_y + offset_y);
+	wire [5:0] calc_x_w = (x_tile + offset_x >39)? (x_tile + offset_x) - 40 : (x_tile + offset_x);
+	wire [5:0] calc_y_w = (y_tile + offset_y >29)? (y_tile + offset_y) - 30 : (y_tile + offset_y);
 	
    assign enderecoTile = (calc_y * 6'd40) + calc_x; 
    assign colorOut = tileMap[enderecoTile];
@@ -45,7 +47,7 @@ module motorBack_Ground(
 			
 				  if (write) begin
 						// Como x_tile e y_tile já vêm de fora (0 a 39 e 0 a 29), a fórmula é direta
-						tileMap[(y_tile * 40) + x_tile] <= color;
+						tileMap[(calc_y_w * 40) + calc_x_w] <= color;
 				  end
 				  if(WRoll)begin
 						case(Roll)

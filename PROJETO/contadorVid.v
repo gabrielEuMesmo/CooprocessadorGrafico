@@ -48,7 +48,7 @@
 endmodule*/
 
 module contadorVid(
-    input             reset,   // ativo baixo, mesma convenção já usada no resto do projeto
+    input             reset,   
     input             clk,
     input             enable,
     output reg [8:0]  x,
@@ -59,7 +59,7 @@ module contadorVid(
 
     reg [16:0] count;
     reg        contando;
-    reg        enable_d;   // amostra anterior de enable, só p/ detectar a borda
+    reg        enable_d;  
 
     always @(posedge clk or negedge reset) begin
         if (!reset) begin
@@ -71,8 +71,7 @@ module contadorVid(
             enable_d <= enable;
 
             if (enable && !enable_d) begin
-                // Borda de subida real de enable (detectada dentro do
-                // próprio domínio de clk, sem sensibilidade dupla)
+               
                 count    <= 17'd0;
                 contando <= 1'b1;
                 done     <= 1'b0;
@@ -84,6 +83,9 @@ module contadorVid(
                     count <= count + 1'b1;
                 end
             end
+				if(done)begin
+					done     <= 1'b0;
+				end
         end
     end
 

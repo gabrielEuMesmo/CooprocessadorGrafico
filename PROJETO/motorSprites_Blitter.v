@@ -2,23 +2,21 @@ module motorSprites_Blitter (
     input  wire        clk,
     input  wire        reset,
     
-    // Controle da MEF Externa
+
     input  wire        start_draw,
     output reg         done_draw,
     
-    // Interface de Escrita nos Registradores (OAM Interna)
+
     input  wire [5:0]  spr_write_idx,
     input  wire [31:0] spr_write_data,
     input  wire        spr_write_en,
     
-    // Interface Linear com o FrameBuffer Externo (write enable é externo)
+  
     output reg  [16:0] address,   
     output reg  [7:0]  color      
 );
 
-    // =========================================================
-    // 1. OAM (Object Attribute Memory) - 64 Sprites de 32 bits
-    // =========================================================
+
     reg [31:0] oam [0:63];
     integer i;
 
@@ -32,13 +30,7 @@ module motorSprites_Blitter (
         end
     end
 
-    // =========================================================
-    // 2. ROM DE PIXELS (16x16) - Instância de IP M10K
-    // Gerada no IP Catalog do Quartus (ex.: "ROM: 1-PORT").
-    // Conteúdo carregado via .mif configurado na geração do IP
-    // (não usa mais $readmemh). Ajuste nome de módulo/portas
-    // conforme o que foi gerado no seu projeto.
-    // =========================================================
+
     reg  [13:0] rom_addr;
     wire [7:0]  rom_data;
 
@@ -48,9 +40,7 @@ module motorSprites_Blitter (
         .q       ( rom_data )
     );
 
-    // =========================================================
-    // 3. MEF DE RASTERIZAÇÃO DOS 64 SPRITES
-    // =========================================================
+
     localparam ST_IDLE       = 3'd0;
     localparam ST_READ_OAM   = 3'd1;
     localparam ST_SETUP_ROM  = 3'd2;
@@ -67,17 +57,16 @@ module motorSprites_Blitter (
     wire [5:0] tile_id  = oam[spr_idx][14:9];
     wire       flip_x   = oam[spr_idx][8];
     wire       flip_y   = oam[spr_idx][7];
-    wire       trapezio = oam[spr_idx][6];
-    wire       visible  = oam[spr_idx][5];
+    wire       visible  = oam[spr_idx][6];
 
     wire [3:0] px_flipped = flip_x ? (4'd15 - px) : px;
     wire [3:0] py_flipped = flip_y ? (4'd15 - py) : py;
 
-    // Largura extra (10/9 bits) para a soma não estourar antes da comparação
-    wire [9:0] real_x_full = pos_x + px;   // até 511 + 15 = 526
-    wire [8:0] real_y_full = pos_y + py;   // até 255 + 15 = 270
+  
+    wire [9:0] real_x_full = pos_x + px;  
+    wire [8:0] real_y_full = pos_y + py; 
 
-    // Pixel fora da área visível (320x240)?
+   
     wire offscreen = (real_x_full >= 10'd320) || (real_y_full >= 9'd240);
 
     always @(posedge clk or negedge reset) begin
@@ -125,9 +114,7 @@ module motorSprites_Blitter (
                 end
 
                 ST_WRITE_BUF: begin
-                    // Só publica endereço/cor novos se o pixel estiver na tela;
-                    // fora da tela, address/color mantêm o último valor válido
-                    // (reescrita idempotente do último pixel bom, inofensiva).
+                   
                     if (!offscreen) begin
                         address <= (real_y_full * 17'd320) + real_x_full[8:0];
                         color   <= rom_data;
