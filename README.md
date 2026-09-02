@@ -15,7 +15,7 @@ Este projeto marca a primeira fase de um problema que tem como objetivo final o 
 
 Foi requisitado pelo problema uma resolução lógica interna do cenários de 320x240 pixels, com duplicação pelo hardware para gerar o sinal da interface VGA operando em 640x480 pixels a 60Hz. Já para a geração de imagem, foi requisitada a criação de três motores com processamento visual contínuo: o motor de background, o motor de sprites e um rasterizador de polígonos. O motor de background precisa gerenciar um tile map de 40x30 posições com blocos de 8x8 pixels e pelo menos 256  padrões disponíveis, permitindo o deslocamento horizontal e vertical da câmera. O motor de sprites deve possuir uma memória ROM com os diferentes sprites armazenados, podendo processar até 32 sprites de 16x16 pixels simultâneos na tela, além de tratar características específicas dos sprites como posição, espelhamento, prioridade e visibilidade. E o rasterizador de polígonos deve desenhar triângulos e retângulos preenchidos, utilizando aritmética para a sua construção.
 
-Por fim, para a apresentação dos motores na tela, foi requerido a implementação de uma “unidade de controle” responsável por combinar as informações de background, dos sprites e dos polígonos a cada pixel desenhado. Esse controlador seria responsável por aplicar as regras de transparência, lidar com as sobreposições utilizando pelo menos três níveis de prioridade e, por fim, converter o índice gráfico de 8 bits em um sinal RGB através de uma paleta de cores programável com 256 entradas.
+Por fim, para a apresentação dos motores na tela, foi requerido a implementação de uma controladora de estados responsável por combinar as informações de background, dos sprites e dos polígonos a cada pixel desenhado. Esse controlador seria responsável por aplicar as regras de transparência, lidar com as sobreposições utilizando pelo menos três níveis de prioridade e, por fim, converter o índice gráfico de 8 bits em um sinal RGB através de uma paleta de cores programável com 256 entradas.
 
 ### 
 
@@ -23,7 +23,7 @@ Por fim, para a apresentação dos motores na tela, foi requerido a implementaç
 
 A arquitetura do coprocessador adota o modelo de FrameBuffer interno de 320 × 240 pixels, desacoplando a renderização gráfica da geração contínua do sinal VGA. A organização estrutural dos blocos funcionais são ilustradas no diagrama de blocos abaixo:
 
-![Diagrama](/images/diagrama-de-alto-nivel.jpeg)
+![Diagrama](/images/diagrama-de-alto-nivel.jpg)
 
 ### Entradas e saídas
 
@@ -56,7 +56,7 @@ Essa abordagem no fluxo de dados soluciona o problema ao transferir todo o custo
 
 A arquitetura do coprocessador gráfico foi organizada de maneira modular, separando a lógica de controle, o fluxo de dados e o processamento de vídeo, garantindo a possibilidade de expansão. O projeto está dividido nos seguintes blocos principais:
 
-### Unidade de Controle (`controlador_MEF`)
+### Controladora de estados (`controlador_MEF`)
 
 Funciona como o mediador da interação com o usuário, traduzindo as ações manuais na placa em comandos para o hardware.
 
