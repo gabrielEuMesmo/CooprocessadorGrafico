@@ -23,7 +23,7 @@ Por fim, para a apresentação dos motores na tela, foi requerido a implementaç
 
 A arquitetura do coprocessador adota o modelo de FrameBuffer interno de 320 × 240 pixels, desacoplando a renderização gráfica da geração contínua do sinal VGA. A organização estrutural dos blocos funcionais são ilustradas no diagrama de blocos abaixo:
 
-![Diagrama](diagrama-de-alto-nivel.jpeg)
+![Diagrama](/images/diagrama-de-alto-nivel.jpeg)
 
 ### Entradas e saídas
 
