@@ -72,7 +72,7 @@ São os responsáveis por definir quem desenha, em que momento e qual camada fic
 - Para evitar que a tela seja alterada no meio da varredura visível, essa máquina de estados aguarda o monitor terminar o quadro ativo (`vsync`). A partir daí, autoriza o desenho em uma ordem pré setada de profundidade: primeiro o fundo, depois os polígonos e, por último, os sprites. O `MUX Final` chaveia o barramento para o motor que está ativo no momento e só ativa a gravação na memória (`wren`) se o pixel não for nulo, garantindo a transparência das camadas sobrepostas;
 - O gerenciador de camadas leva os pulsos de habilitação para cada motor (`enableBg`, `enablePol`, `enableSprt`) e o barramento final de escrita direcionado à memória de vídeo, para permitir o desenho na tela VGA.
 
-### Motor de Background(`motorBack_Ground`)
+### Motor de Background (`motorBack_Ground`)
 
 Responsável por montar o cenário de fundo da tela utilizando um mapa de blocos (tile map) e permitindo o efeito de rolagem da câmera.
 
